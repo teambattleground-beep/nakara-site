@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nakara — Headcount. Reinvented. Know your team, instantly. Calm, modern workforce intelligence for teams that have outgrown the spreadsheet." />
+  <title>Nakara — Headcount. Reinvented.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ SECTION 1: NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Nakara home">
+        <img src="assets/logo-primary.png" alt="" class="nav__logo-img" />
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#how">Product</a>
+        <a href="#why">Why Nakara</a>
+        <a href="#customer">Pricing</a>
+        <a href="#" class="nav__signin">Sign in</a>
+      </nav>
+
+      <a href="#cta" class="btn btn--ghost nav__cta">Get a Demo</a>
+
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="mobile-menu" hidden>
+      <a href="#how">Product</a>
+      <a href="#why">Why Nakara</a>
+      <a href="#customer">Pricing</a>
+      <a href="#">Sign in</a>
+      <a href="#cta" class="btn btn--ghost">Get a Demo</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ SECTION 2: HERO ============ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__headline">Know your team &mdash;<br />instantly.</h1>
+          <p class="hero__sub">Your workforce, in one clear view. No spreadsheets. No guessing. Just the truth, when you need it.</p>
+          <div class="hero__actions">
+            <a href="#cta" class="btn btn--primary">Get a Demo</a>
+            <a href="#how" class="hero__link">See how it works &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Abstract CSS-only visual: stacked rows suggesting a calm, ordered team view -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="board">
+            <div class="board__header">
+              <span class="board__dot board__dot--a"></span>
+              <span class="board__dot board__dot--b"></span>
+              <span class="board__dot board__dot--c"></span>
+              <span class="board__title">Today &middot; 9:14</span>
+            </div>
+            <div class="board__row">
+              <span class="board__avatar"></span>
+              <span class="board__bar"></span>
+              <span class="board__meta"></span>
+            </div>
+            <div class="board__row board__row--highlight">
+              <span class="board__avatar"></span>
+              <span class="board__bar board__bar--wide"></span>
+              <span class="board__meta"></span>
+              <span class="board__pill">New</span>
+            </div>
+            <div class="board__row">
+              <span class="board__avatar"></span>
+              <span class="board__bar"></span>
+              <span class="board__meta"></span>
+            </div>
+            <div class="board__row">
+              <span class="board__avatar"></span>
+              <span class="board__bar board__bar--mid"></span>
+              <span class="board__meta"></span>
+            </div>
+            <div class="board__row board__row--quiet">
+              <span class="board__avatar"></span>
+              <span class="board__bar"></span>
+              <span class="board__meta"></span>
+            </div>
+            <div class="board__row">
+              <span class="board__avatar"></span>
+              <span class="board__bar"></span>
+              <span class="board__meta"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3: THE PROBLEM ============ -->
+    <section class="problem">
+      <div class="container">
+        <p class="section-label">The problem</p>
+        <ol class="problem__list">
+          <li class="problem__item">
+            <h3 class="problem__h">Spreadsheets were not built for this.</h3>
+            <p class="problem__sub">They start small &mdash; and quietly become the source of truth. Until one wrong cell ends the quarter.</p>
+          </li>
+          <li class="problem__item">
+            <h3 class="problem__h">Your HRIS tells you what already happened.</h3>
+            <p class="problem__sub">It&rsquo;s a system of record, not a system of decisions. The future stays invisible.</p>
+          </li>
+          <li class="problem__item">
+            <h3 class="problem__h">Decisions wait on data nobody trusts.</h3>
+            <p class="problem__sub">Every meeting starts with &ldquo;what&rsquo;s the actual number?&rdquo; &mdash; and ends with no one quite sure.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4: HOW NAKARA WORKS ============ -->
+    <section class="how" id="how">
+      <div class="container">
+        <p class="section-label">How Nakara works</p>
+        <h2 class="section-h">One source of truth. Always current.</h2>
+
+        <div class="how__grid">
+
+          <article class="feature">
+            <p class="feature__tag">Feature</p>
+            <h3 class="feature__title">A live, unified view of every role.</h3>
+            <ul class="feature__benefits">
+              <li>See your whole team on one screen.</li>
+              <li>Stop chasing managers for updates.</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <p class="feature__tag">Feature</p>
+            <h3 class="feature__title">AI-powered forecasting.</h3>
+            <ul class="feature__benefits">
+              <li>Plan hiring months ahead, with confidence.</li>
+              <li>Catch problems before they cost you.</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <p class="feature__tag">Feature</p>
+            <h3 class="feature__title">Smart insights, surfaced automatically.</h3>
+            <ul class="feature__benefits">
+              <li>Know what&rsquo;s changing, without asking.</li>
+              <li>Spend your time on people, not on reports.</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <p class="feature__tag">Feature</p>
+            <h3 class="feature__title">Privacy and access, built in.</h3>
+            <ul class="feature__benefits">
+              <li>The right people see the right things.</li>
+              <li>Sleep well knowing it&rsquo;s audit-ready.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 5: WHY NAKARA ============ -->
+    <section class="why" id="why">
+      <div class="container">
+        <p class="section-label">Why teams choose Nakara</p>
+        <h2 class="section-h">Built for the way real teams work.</h2>
+
+        <div class="why__grid">
+          <div class="pillar">
+            <h3 class="pillar__h">Live, not stale.</h3>
+            <p class="pillar__p">Always current. No exports. No overnight sync.</p>
+          </div>
+          <div class="pillar">
+            <h3 class="pillar__h">Private by default.</h3>
+            <p class="pillar__p">Built for HR. Permissions, audits, encryption &mdash; handled.</p>
+          </div>
+          <div class="pillar">
+            <h3 class="pillar__h">Fast to value.</h3>
+            <p class="pillar__p">Most teams are live in a week. No six-month rollout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 6: CUSTOMER VOICE ============ -->
+    <section class="customer" id="customer">
+      <div class="container">
+        <p class="section-label">Loved by early teams</p>
+
+        <div class="logos" aria-label="Placeholder customer logos">
+          <span class="logos__item"><span class="shape shape--circle"></span><span class="logos__name">your logo here</span></span>
+          <span class="logos__item"><span class="shape shape--square"></span><span class="logos__name">your logo here</span></span>
+          <span class="logos__item"><span class="shape shape--triangle"></span><span class="logos__name">your logo here</span></span>
+          <span class="logos__item"><span class="shape shape--diamond"></span><span class="logos__name">your logo here</span></span>
+          <span class="logos__item"><span class="shape shape--hex"></span><span class="logos__name">your logo here</span></span>
+        </div>
+
+        <blockquote class="quote">
+          <p>&ldquo;Since switching to Nakara, our leadership team finally trusts the headcount number.&rdquo;</p>
+          <footer class="quote__attr">
+            <cite>Person Name</cite>, <span>Title</span>, <span>Company</span>
+            <span class="quote__placeholder">Placeholder</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 7: CTA FOOTER ============ -->
+    <section class="cta" id="cta">
+      <div class="container cta__inner">
+        <h2 class="cta__h">See your team clearly. Tomorrow.</h2>
+        <p class="cta__sub">Book a 20-minute demo. We&rsquo;ll show you Nakara with your data, in your language.</p>
+
+        <form class="cta__form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thanks — we\u2019ll be in touch.';">
+          <label class="visually-hidden" for="cta-email">Work email</label>
+          <input id="cta-email" type="email" placeholder="your@work-email.com" autocomplete="email" />
+          <button type="submit" class="btn btn--primary">Get a Demo</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ SECTION 8: FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-primary.png" alt="Nakara" class="footer__logo" />
+        <p class="footer__tag">Headcount. Reinvented.</p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <p class="footer__h">Product</p>
+          <a href="#how">Overview</a>
+          <a href="#">Forecasting</a>
+          <a href="#">Insights</a>
+          <a href="#">Security</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__h">Company</p>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__h">Resources</p>
+          <a href="#">Guides</a>
+          <a href="#">Changelog</a>
+          <a href="#">Help center</a>
+          <a href="#">Status</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__h">Legal</p>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+          <a href="#">DPA</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__base">
+      <p>&copy; <span id="year"></span> Nakara. All rights reserved.</p>
+      <p class="footer__quiet">Made with care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
