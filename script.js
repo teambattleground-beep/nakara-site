@@ -72,18 +72,18 @@
       var email = emailInput && emailInput.value ? emailInput.value.trim() : '';
       if (!email) return;
 
-      var subject = encodeURIComponent('Nakara demo / early access request');
+      var subject = encodeURIComponent('Nakara conversation — AI employees / solutions');
       var body = encodeURIComponent(
-        'Hi Nakara team,\n\nI would like a demo / early access conversation.\n\nWork email: ' +
+        'Hi Nakara team,\n\nI would like a conversation about AI employees / AI solutions for our business.\n\nWork email: ' +
           email +
-          '\n\n(Optional) Company / role:\n\nWhat hurts about headcount planning today:\n\n'
+          '\n\n(Optional) Company / role:\n\nWhere we need capacity most:\n\n'
       );
       window.location.href = 'mailto:NakaraLLC@proton.me?subject=' + subject + '&body=' + body;
 
       var btn = form.querySelector('button');
       if (btn) btn.textContent = 'Opening email…';
       setTimeout(function () {
-        if (btn) btn.textContent = 'Request a Demo';
+        if (btn) btn.textContent = 'Request a conversation';
       }, 2500);
     });
   }
