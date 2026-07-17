@@ -320,7 +320,20 @@ button { font-family: inherit; }
   outline: 1px solid var(--highlight-line);
   grid-template-columns: 28px 1fr 56px auto;
 }
+.board__row--departed {
+  grid-template-columns: 28px 1fr 56px auto;
+  opacity: 0.55;
+}
 .board__row--quiet { opacity: 0.55; }
+
+.board__sync {
+  margin: -0.35rem 0 0.75rem;
+  padding: 0 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
 
 .board__avatar {
   width: 28px; height: 28px;
@@ -354,6 +367,57 @@ button { font-family: inherit; }
   border: 1px solid var(--highlight-line);
   padding: 3px 7px;
   border-radius: 999px;
+}
+.board__pill--quiet {
+  color: var(--muted);
+  border-color: var(--line);
+  background: transparent;
+}
+
+/* -------- Section 2.5: WHAT NAKARA IS -------- */
+.what {
+  padding: 5rem 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+.what__inner {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.what__lead {
+  font-size: clamp(1.15rem, 1vw + 1rem, 1.4rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.45;
+  color: var(--navy-900);
+  margin: 0 0 3rem;
+}
+.what__glance {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: left;
+}
+.glance {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+}
+.glance__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy-800);
+  margin: 0 0 0.4rem;
+}
+.glance__p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* -------- Section 3: PROBLEM -------- */
@@ -464,6 +528,72 @@ button { font-family: inherit; }
   width: 8px; height: 1.5px;
   background: var(--accent);
 }
+.feature__note {
+  margin: 1.25rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* -------- Section 5.5: HOW TEAMS USE NAKARA -------- */
+.usecases {
+  padding: 5rem 0 6rem;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.usecases__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 46rem;
+}
+.usecase {
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent-soft);
+}
+.usecase__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy-800);
+  margin: 0 0 0.6rem;
+}
+.usecase__body {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 52ch;
+}
+
+/* -------- Section 6.5: BEHIND THE PRODUCT -------- */
+.behind {
+  padding: 5rem 0;
+  background: var(--off-white);
+  border-top: 1px solid var(--line);
+}
+.behind__inner {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.behind__lead {
+  font-size: clamp(1.2rem, 1vw + 1rem, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+  color: var(--navy-900);
+  margin: 0 0 1.25rem;
+}
+.behind__quiet {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+  font-style: italic;
+}
 
 /* -------- Section 5: WHY NAKARA -------- */
 .why {
@@ -545,6 +675,12 @@ button { font-family: inherit; }
   text-align: center;
   padding: 0 1rem;
 }
+.quotes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+.quotes .quote { margin: 0; }
 .quote p {
   font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
   font-weight: 500;
@@ -684,6 +820,32 @@ button { font-family: inherit; }
 .footer__base p { margin: 0; }
 .footer__quiet { font-style: italic; }
 
+.footer__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  font-size: 0.75rem;
+  color: #7A8AA0;
+}
+.footer__meta p { margin: 0; }
+.footer__coming { letter-spacing: 0.04em; }
+.footer__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.footer__status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7FB08A;
+}
+
 /* -------- Reveal animation -------- */
 .reveal {
   opacity: 0;
@@ -711,6 +873,9 @@ button { font-family: inherit; }
   .hero { padding: 7rem 0 6rem; }
   .hero__inner { grid-template-columns: 1.05fr 1fr; gap: 5rem; }
 
+  .what { padding: 6.5rem 0; }
+  .what__glance { grid-template-columns: repeat(3, 1fr); }
+
   .problem { padding: 7rem 0; }
   .problem__item { padding: 2.5rem 0 2.5rem 4.5rem; }
 
@@ -723,8 +888,13 @@ button { font-family: inherit; }
   .why { padding: 7rem 0 8rem; }
   .why__grid { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 
+  .usecases { padding: 7rem 0 8rem; }
+
   .customer { padding: 7rem 0; }
   .logos { grid-template-columns: repeat(5, 1fr); margin-bottom: 5rem; }
+  .quotes { grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+
+  .behind { padding: 6rem 0; }
 
   .cta { padding: 8rem 0; }
   .cta__form {

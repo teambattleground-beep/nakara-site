@@ -47,7 +47,7 @@
   // invisible if JS is slow to load or blocked.
   var heroCopy = document.querySelector('.hero__copy');
   var belowFold = document.querySelectorAll(
-    '.problem__item, .feature, .pillar, .logos, .quote, .cta__h, .cta__sub, .cta__form, .footer__inner'
+    '.what__lead, .glance, .problem__item, .feature, .pillar, .usecase, .logos, .quote, .behind__lead, .behind__quiet, .cta__h, .cta__sub, .cta__form, .footer__inner'
   );
 
   // Only animate sections that are clearly below the fold.
