@@ -41,13 +41,34 @@
     });
   }
 
+  // ---- FAQ accordion (vanilla, no library) ----
+  var faqButtons = document.querySelectorAll('.faq__q');
+  faqButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      var panelId = btn.getAttribute('aria-controls');
+      var panel = panelId ? document.getElementById(panelId) : null;
+
+      // Close others for a calm single-open accordion
+      faqButtons.forEach(function (other) {
+        if (other === btn) return;
+        other.setAttribute('aria-expanded', 'false');
+        var otherId = other.getAttribute('aria-controls');
+        var otherPanel = otherId ? document.getElementById(otherId) : null;
+        if (otherPanel) otherPanel.hidden = true;
+      });
+
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      if (panel) panel.hidden = expanded;
+    });
+  });
+
   // ---- Subtle scroll reveal via IntersectionObserver ----
   // Only mark elements as reveal AFTER confirming JS is running AND
   // they are below the fold. This prevents the hero from being
   // invisible if JS is slow to load or blocked.
-  var heroCopy = document.querySelector('.hero__copy');
   var belowFold = document.querySelectorAll(
-    '.what__lead, .glance, .problem__item, .feature, .pillar, .usecase, .logos, .quote, .behind__lead, .behind__quiet, .cta__h, .cta__sub, .cta__form, .footer__inner'
+    '.what__lead, .glance, .audience-card, .problem__item, .stop__item, .feature, .cycle__step, .pillar, .usecase, .logos, .quote, .behind__lead, .behind__diff, .behind__quiet, .faq__item, .cta__h, .cta__sub, .cta__form, .footer__inner'
   );
 
   // Only animate sections that are clearly below the fold.

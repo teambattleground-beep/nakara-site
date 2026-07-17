@@ -420,6 +420,45 @@ button { font-family: inherit; }
   line-height: 1.5;
 }
 
+/* -------- Section 2.6: WHO IT'S FOR -------- */
+.audience {
+  padding: 5rem 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.audience .section-h { max-width: 28ch; }
+.audience__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+.audience-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem 1.9rem;
+  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+}
+.audience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -16px rgba(10, 37, 64, 0.12);
+  border-color: #D7DDE7;
+}
+.audience-card__h {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--navy-900);
+  margin: 0 0 0.6rem;
+}
+.audience-card__p {
+  font-size: 0.97rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.55;
+  max-width: 36ch;
+}
+
 /* -------- Section 3: PROBLEM -------- */
 .problem {
   padding: 5rem 0;
@@ -464,6 +503,55 @@ button { font-family: inherit; }
   max-width: 48ch;
   margin: 0;
   line-height: 1.6;
+}
+
+/* -------- Section 3.5: WHAT YOU STOP DOING -------- */
+.stop {
+  padding: 5rem 0 6rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+.stop .section-h { max-width: 28ch; }
+.stop__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 44rem;
+}
+.stop__item {
+  position: relative;
+  padding: 1.5rem 0 1.5rem 1.75rem;
+  border-top: 1px solid var(--line);
+}
+.stop__item:last-child { border-bottom: 1px solid var(--line); }
+.stop__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.85rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  background: transparent;
+}
+.stop__h {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--navy-900);
+  margin: 0 0 0.35rem;
+  line-height: 1.3;
+}
+.stop__p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.55;
+  max-width: 48ch;
 }
 
 /* -------- Section 4: HOW NAKARA WORKS -------- */
@@ -537,6 +625,57 @@ button { font-family: inherit; }
   line-height: 1.55;
 }
 
+/* -------- Section 4.5: HOW A PLANNING CYCLE WORKS -------- */
+.cycle {
+  padding: 5rem 0 6rem;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+.cycle .section-h { max-width: 24ch; margin-bottom: 0.75rem; }
+.cycle__lead {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 0 0 3rem;
+  max-width: 40ch;
+  line-height: 1.55;
+}
+.cycle__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+.cycle__step {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.5rem 1.75rem;
+}
+.cycle__num {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 0.65rem;
+}
+.cycle__h {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--navy-900);
+  margin: 0 0 0.5rem;
+}
+.cycle__p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.55;
+  max-width: 36ch;
+}
+
 /* -------- Section 5.5: HOW TEAMS USE NAKARA -------- */
 .usecases {
   padding: 5rem 0 6rem;
@@ -586,7 +725,13 @@ button { font-family: inherit; }
   letter-spacing: -0.015em;
   line-height: 1.4;
   color: var(--navy-900);
+  margin: 0 0 1rem;
+}
+.behind__diff {
+  font-size: 1rem;
+  color: var(--ink-soft);
   margin: 0 0 1.25rem;
+  line-height: 1.55;
 }
 .behind__quiet {
   font-size: 0.92rem;
@@ -595,13 +740,96 @@ button { font-family: inherit; }
   font-style: italic;
 }
 
+/* -------- Section 6.8: FAQ -------- */
+.faq {
+  padding: 5rem 0 6rem;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+.faq .section-h { max-width: 18ch; }
+.faq__list {
+  max-width: 40rem;
+  border-top: 1px solid var(--line);
+}
+.faq__item {
+  border-bottom: 1px solid var(--line);
+}
+.faq__q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 1.25rem 0;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--navy-900);
+  cursor: pointer;
+  line-height: 1.35;
+}
+.faq__q:hover { color: var(--navy-700); }
+.faq__q:focus-visible {
+  outline: 2px solid var(--navy-800);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.faq__icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+.faq__icon::before,
+.faq__icon::after {
+  content: "";
+  position: absolute;
+  background: var(--navy-800);
+  border-radius: 1px;
+  transition: transform var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease);
+}
+.faq__icon::before {
+  left: 0; top: 8px;
+  width: 18px; height: 1.5px;
+}
+.faq__icon::after {
+  left: 8px; top: 0;
+  width: 1.5px; height: 18px;
+}
+.faq__q[aria-expanded="true"] .faq__icon::after {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.faq__a {
+  padding: 0 0 1.35rem;
+}
+.faq__a[hidden] { display: none; }
+.faq__a p {
+  margin: 0;
+  font-size: 0.97rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 48ch;
+}
+
 /* -------- Section 5: WHY NAKARA -------- */
 .why {
   padding: 5rem 0 6rem;
   background: var(--off-white);
   border-top: 1px solid var(--line);
 }
-.why .section-h { max-width: 32ch; }
+.why .section-h { max-width: 32ch; margin-bottom: 1rem; }
+.why__diff {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  margin: 0 0 3rem;
+  max-width: 48ch;
+  line-height: 1.55;
+}
 .why__grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -876,14 +1104,22 @@ button { font-family: inherit; }
   .what { padding: 6.5rem 0; }
   .what__glance { grid-template-columns: repeat(3, 1fr); }
 
+  .audience { padding: 6.5rem 0; }
+  .audience__grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
   .problem { padding: 7rem 0; }
   .problem__item { padding: 2.5rem 0 2.5rem 4.5rem; }
+
+  .stop { padding: 7rem 0 8rem; }
 
   .how { padding: 7rem 0 8rem; }
   .how__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.75rem;
   }
+
+  .cycle { padding: 7rem 0 8rem; }
+  .cycle__steps { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
   .why { padding: 7rem 0 8rem; }
   .why__grid { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
@@ -895,6 +1131,8 @@ button { font-family: inherit; }
   .quotes { grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
 
   .behind { padding: 6rem 0; }
+
+  .faq { padding: 7rem 0 8rem; }
 
   .cta { padding: 8rem 0; }
   .cta__form {
@@ -915,6 +1153,10 @@ button { font-family: inherit; }
   .how__grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
+  }
+  .cycle__steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
   }
 }
 
