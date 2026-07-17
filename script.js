@@ -63,12 +63,37 @@
     });
   });
 
+  // ---- Demo form → mailto (works without backend pre-launch) ----
+  var form = document.getElementById('cta-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var emailInput = document.getElementById('cta-email');
+      var email = emailInput && emailInput.value ? emailInput.value.trim() : '';
+      if (!email) return;
+
+      var subject = encodeURIComponent('Nakara demo / early access request');
+      var body = encodeURIComponent(
+        'Hi Nakara team,\n\nI would like a demo / early access conversation.\n\nWork email: ' +
+          email +
+          '\n\n(Optional) Company / role:\n\nWhat hurts about headcount planning today:\n\n'
+      );
+      window.location.href = 'mailto:NakaraLLC@proton.me?subject=' + subject + '&body=' + body;
+
+      var btn = form.querySelector('button');
+      if (btn) btn.textContent = 'Opening email…';
+      setTimeout(function () {
+        if (btn) btn.textContent = 'Request a Demo';
+      }, 2500);
+    });
+  }
+
   // ---- Subtle scroll reveal via IntersectionObserver ----
   // Only mark elements as reveal AFTER confirming JS is running AND
   // they are below the fold. This prevents the hero from being
   // invisible if JS is slow to load or blocked.
   var belowFold = document.querySelectorAll(
-    '.what__lead, .glance, .audience-card, .problem__item, .stop__item, .feature, .cycle__step, .pillar, .usecase, .logos, .quote, .behind__lead, .behind__diff, .behind__quiet, .faq__item, .cta__h, .cta__sub, .cta__form, .footer__inner'
+    '.what__lead, .glance, .audience__lead, .audience-card, .problem__item, .stop__item, .feature, .cycle__step, .pillar, .usecase, .early__lead, .early__list, .behind__lead, .behind__quiet, .faq__item, .cta__h, .cta__sub, .cta__form, .footer__inner'
   );
 
   // Only animate sections that are clearly below the fold.
