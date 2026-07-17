@@ -162,8 +162,26 @@ button { font-family: inherit; }
   height: 68px;
   gap: 1rem;
 }
-.nav__logo { display: inline-flex; align-items: center; }
-.nav__logo-img { height: 34px; width: auto; display: block; }
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+}
+.nav__logo-mark {
+  height: 26px;
+  width: 26px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.nav__wordmark {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--navy-900);
+}
 
 .nav__links {
   display: none;
@@ -1075,11 +1093,28 @@ button { font-family: inherit; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .footer__brand { display: flex; flex-direction: column; gap: 0.9rem; }
-.footer__logo {
-  height: 36px;
-  width: auto;
+.footer__logo-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  width: fit-content;
+}
+.footer__logo-mark {
+  height: 28px;
+  width: 28px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
   filter: brightness(0) invert(1);
   opacity: 0.95;
+}
+.footer__wordmark {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #FFFFFF;
 }
 .footer__tag {
   font-size: 0.75rem;
