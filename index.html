@@ -486,12 +486,37 @@
         <h2 class="cta__h">Ready for a clearer answer?</h2>
         <p class="cta__sub">Tell us what&rsquo;s draining the business. We&rsquo;ll map whether an AI employee, a custom solution, consulting, or something simpler is the right move — in plain language.</p>
 
-        <form class="cta__form" id="cta-form">
-          <label class="visually-hidden" for="cta-email">Work email</label>
-          <input id="cta-email" name="email" type="email" required placeholder="your@work-email.com" autocomplete="email" />
-          <button type="submit" class="btn btn--primary">Request a conversation</button>
+        <form
+          class="cta__form"
+          id="cta-form"
+          method="POST"
+          action="https://formsubmit.co/ajax/NakaraLLC@proton.me"
+          novalidate
+        >
+          <!-- Interim: FormSubmit → NakaraLLC@proton.me. Swap action to ticket/API endpoint when live. -->
+          <input type="hidden" name="_subject" value="Nakara — conversation request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="cta__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="cta__field">
+            <label class="cta__label" for="cta-name">Name</label>
+            <input id="cta-name" name="name" type="text" required placeholder="Your name" autocomplete="name" />
+          </div>
+
+          <div class="cta__field">
+            <label class="cta__label" for="cta-email">Work email</label>
+            <input id="cta-email" name="email" type="email" required placeholder="your@work-email.com" autocomplete="email" />
+          </div>
+
+          <div class="cta__field">
+            <label class="cta__label" for="cta-body">How can we help?</label>
+            <textarea id="cta-body" name="message" required rows="5" placeholder="What is the problem, what is stuck, or what you are hoping to solve..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="cta-submit">Request a conversation</button>
+          <p class="cta__status" id="cta-status" role="status" aria-live="polite" hidden></p>
         </form>
-        <p class="cta__note">Opens your email to <a href="mailto:NakaraLLC@proton.me">NakaraLLC@proton.me</a> — or write us directly.</p>
       </div>
     </section>
 

@@ -63,28 +63,109 @@
     });
   });
 
-  // ---- Demo form → mailto (works without backend pre-launch) ----
+  // ---- CTA form → FormSubmit (swap form action later for tickets/API) ----
   var form = document.getElementById('cta-form');
   if (form) {
+    var statusEl = document.getElementById('cta-status');
+    var submitBtn = document.getElementById('cta-submit');
+    var defaultBtnLabel = submitBtn ? submitBtn.textContent : 'Request a conversation';
+
+    function setStatus(msg, kind) {
+      if (!statusEl) return;
+      statusEl.hidden = !msg;
+      statusEl.textContent = msg || '';
+      statusEl.classList.remove('is-ok', 'is-err');
+      if (kind) statusEl.classList.add(kind);
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      var nameInput = document.getElementById('cta-name');
       var emailInput = document.getElementById('cta-email');
+      var bodyInput = document.getElementById('cta-body');
+      var honey = form.querySelector('[name="_honey"]');
+
+      var name = nameInput && nameInput.value ? nameInput.value.trim() : '';
       var email = emailInput && emailInput.value ? emailInput.value.trim() : '';
-      if (!email) return;
+      var message = bodyInput && bodyInput.value ? bodyInput.value.trim() : '';
 
-      var subject = encodeURIComponent('Nakara conversation — AI employees / solutions');
-      var body = encodeURIComponent(
-        'Hi Nakara team,\n\nI would like a conversation about AI employees / AI solutions for our business.\n\nWork email: ' +
-          email +
-          '\n\n(Optional) Company / role:\n\nWhere we need capacity most:\n\n'
-      );
-      window.location.href = 'mailto:NakaraLLC@proton.me?subject=' + subject + '&body=' + body;
+      // Honeypot filled → pretend success, drop spam
+      if (honey && honey.value) {
+        setStatus('Thanks — we received your note and will be in touch.', 'is-ok');
+        form.reset();
+        return;
+      }
 
-      var btn = form.querySelector('button');
-      if (btn) btn.textContent = 'Opening email…';
-      setTimeout(function () {
-        if (btn) btn.textContent = 'Request a conversation';
-      }, 2500);
+      if (!name) {
+        setStatus('Please add your name.', 'is-err');
+        if (nameInput) nameInput.focus();
+        return;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setStatus('Please enter a valid work email.', 'is-err');
+        if (emailInput) emailInput.focus();
+        return;
+      }
+      if (!message) {
+        setStatus('Tell us a bit about how we can help.', 'is-err');
+        if (bodyInput) bodyInput.focus();
+        return;
+      }
+
+      var endpoint = form.getAttribute('action');
+      if (!endpoint) {
+        setStatus('Form is not configured yet. Please try again later.', 'is-err');
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+      setStatus('');
+
+      var payload = {
+        name: name,
+        email: email,
+        message: message,
+        _subject: 'Nakara — conversation request',
+        _template: 'table',
+        _captcha: 'false'
+      };
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (data) {
+            return { ok: res.ok, data: data };
+          });
+        })
+        .then(function (result) {
+          if (result.ok || (result.data && (result.data.success === 'true' || result.data.success === true))) {
+            setStatus('Thanks — we received your note and will be in touch.', 'is-ok');
+            form.reset();
+          } else {
+            var errMsg = (result.data && (result.data.message || result.data.error)) ||
+              'Something went wrong. Please try again in a moment.';
+            setStatus(errMsg, 'is-err');
+          }
+        })
+        .catch(function () {
+          setStatus('Could not send right now. Please try again in a moment.', 'is-err');
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultBtnLabel;
+          }
+        });
     });
   }
 

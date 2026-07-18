@@ -1085,22 +1085,33 @@ button { font-family: inherit; }
 .cta__form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  max-width: 26rem;
+  gap: 1rem;
+  max-width: 28rem;
   margin: 0 auto;
+  text-align: left;
 }
-.cta__note {
-  margin: 1.1rem 0 0;
-  font-size: 0.88rem;
-  color: var(--muted);
-  line-height: 1.5;
+.cta__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
-.cta__note a {
-  color: var(--navy-800);
-  border-bottom: 1px solid transparent;
+.cta__label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
 }
-.cta__note a:hover { border-bottom-color: var(--navy-800); }
-.cta__form input {
+.cta__honey {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.cta__form input,
+.cta__form textarea {
   font-family: inherit;
   font-size: 0.95rem;
   padding: 0.9rem 1rem;
@@ -1108,15 +1119,39 @@ button { font-family: inherit; }
   border-radius: var(--radius-sm);
   background: var(--white);
   color: var(--ink);
+  width: 100%;
+  box-sizing: border-box;
   transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
 }
-.cta__form input::placeholder { color: var(--muted); }
-.cta__form input:focus {
+.cta__form textarea {
+  min-height: 8.5rem;
+  resize: vertical;
+  line-height: 1.5;
+}
+.cta__form input::placeholder,
+.cta__form textarea::placeholder { color: var(--muted); }
+.cta__form input:focus,
+.cta__form textarea:focus {
   outline: none;
   border-color: var(--navy-800);
   box-shadow: 0 0 0 3px rgba(10, 37, 64, 0.08);
 }
-.cta__form .btn { width: 100%; }
+.cta__form .btn {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+.cta__form .btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+.cta__status {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  text-align: center;
+}
+.cta__status.is-ok { color: #2F6B4F; }
+.cta__status.is-err { color: #9B3B2E; }
 
 /* -------- Section 8: FOOTER -------- */
 .footer {
@@ -1286,12 +1321,7 @@ button { font-family: inherit; }
   .faq { padding: 7rem 0 8rem; }
 
   .cta { padding: 8rem 0; }
-  .cta__form {
-    flex-direction: row;
-    gap: 0.5rem;
-  }
-  .cta__form input { flex: 1; }
-  .cta__form .btn { width: auto; }
+  .cta__form { max-width: 30rem; }
 
   .footer { padding: 5rem 0 2rem; }
   .footer__inner {
