@@ -19,7 +19,8 @@
 ## Product narrative (locked for public site)
 
 - **Company:** builds **AI employees (digital coworkers)** and **custom AI-powered solutions** for businesses  
-- **Tagline:** **Headcount. Reinvented.** = flexible capacity via AI teammates — **not** HR software / headcount planning  
+- **Brand tagline (footer / TM):** **Headcount. Reinvented.** = flexible capacity via AI teammates — **not** HR software / headcount planning
+- **Hero eyebrow (v5.1):** **Outcomes. Not software.** — first-view emphasizes solutions/results + AI employees (JB 2026-07-18)  
 - **Audience:** owners, ops, delivery, sales, support — whole business, not HR/Finance/Talent buyers  
 - **Model:** configure + operate role-shaped AI workers (service-shaped), not DIY tool license  
 
