@@ -14,7 +14,7 @@
 | v3 | `8a2e863` | HR headcount-planning language (superseded) |
 | v4 | `4679720` | Honest pre-launch polish (still HR framing — superseded) |
 | v4.1 | `5d53223` | Temporary geometric 中 logo |
-| **v5.4** | **`TBD`** | CTA form: name + message; submit (no mailto note) |
+| **v5.4** | **`f102330`** | CTA form: name + message; submit (no mailto note) |
 | **v5.3** | **`753b5e8`** | What we build: +AI/tech consulting; with-or-without AI employee |
 | v5.2 | **`65b8047`** | Hero H1 → You bring the problem. We build the answer. |
 | **v5.1** | **`6cc5b19`** | Hero eyebrow: Outcomes. Not software. |
