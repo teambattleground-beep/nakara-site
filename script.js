@@ -63,13 +63,11 @@
     });
   });
 
-  // ---- CTA form → FormSubmit (classic POST so autoresponse works) ----
-  // FormSubmit: autoresponse does NOT work with AJAX or _captcha=false.
+  // ---- CTA form → Google Apps Script (inquiry + confirmation emails) ----
   var form = document.getElementById('cta-form');
   if (form) {
     var statusEl = document.getElementById('cta-status');
     var submitBtn = document.getElementById('cta-submit');
-    var autoEl = document.getElementById('cta-autoresponse');
 
     function setStatus(msg, kind) {
       if (!statusEl) return;
@@ -79,7 +77,7 @@
       if (kind) statusEl.classList.add(kind);
     }
 
-    // Thank-you state after FormSubmit redirects back (?thanks=1)
+    // Thank-you state after Apps Script redirects back (?thanks=1)
     try {
       var params = new URLSearchParams(window.location.search);
       if (params.get('thanks') === '1') {
@@ -100,7 +98,7 @@
       var email = emailInput && emailInput.value ? emailInput.value.trim() : '';
       var message = bodyInput && bodyInput.value ? bodyInput.value.trim() : '';
 
-      // Honeypot filled → block spam without contacting FormSubmit
+      // Honeypot filled → block spam without hitting the endpoint
       if (honey && honey.value) {
         e.preventDefault();
         setStatus('Thanks — we received your note and will be in touch.', 'is-ok');
@@ -109,7 +107,6 @@
       }
 
       if (!name || !email || !message) {
-        // Let browser required attrs handle empty fields when possible
         return;
       }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -119,25 +116,11 @@
         return;
       }
 
-      // Personalize autoresponse with name (still classic POST)
-      if (autoEl) {
-        autoEl.value =
-          'Hi ' + name + ',\n\n' +
-          'Thanks for reaching out to Nakara. We received your inquiry and look forward to speaking with you.\n\n' +
-          'Someone from our team will follow up shortly.\n\n' +
-          'To make sure our reply reaches your inbox (not spam):\n' +
-          '• Add hello@nakara.ai to your contacts\n' +
-          '• If a Nakara email lands in spam or junk, mark it Not spam\n' +
-          '• If your company uses email filters, whitelist the domain nakara.ai\n\n' +
-          '— Nakara\n' +
-          'https://nakara.ai';
-      }
-
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending…';
       }
-      // Native submit continues → FormSubmit → autoresponse email → redirect back
+      // Native POST → Apps Script → emails → redirect to ?thanks=1
     });
   }
 
