@@ -63,12 +63,13 @@
     });
   });
 
-  // ---- CTA form → FormSubmit (swap form action later for tickets/API) ----
+  // ---- CTA form → FormSubmit (classic POST so autoresponse works) ----
+  // FormSubmit: autoresponse does NOT work with AJAX or _captcha=false.
   var form = document.getElementById('cta-form');
   if (form) {
     var statusEl = document.getElementById('cta-status');
     var submitBtn = document.getElementById('cta-submit');
-    var defaultBtnLabel = submitBtn ? submitBtn.textContent : 'Request a conversation';
+    var autoEl = document.getElementById('cta-autoresponse');
 
     function setStatus(msg, kind) {
       if (!statusEl) return;
@@ -78,9 +79,18 @@
       if (kind) statusEl.classList.add(kind);
     }
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+    // Thank-you state after FormSubmit redirects back (?thanks=1)
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('thanks') === '1') {
+        setStatus('Thanks — we received your note and will be in touch. Check your email for a confirmation.', 'is-ok');
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState({}, '', window.location.pathname + '#cta');
+        }
+      }
+    } catch (err) { /* ignore */ }
 
+    form.addEventListener('submit', function (e) {
       var nameInput = document.getElementById('cta-name');
       var emailInput = document.getElementById('cta-email');
       var bodyInput = document.getElementById('cta-body');
@@ -90,94 +100,44 @@
       var email = emailInput && emailInput.value ? emailInput.value.trim() : '';
       var message = bodyInput && bodyInput.value ? bodyInput.value.trim() : '';
 
-      // Honeypot filled → pretend success, drop spam
+      // Honeypot filled → block spam without contacting FormSubmit
       if (honey && honey.value) {
+        e.preventDefault();
         setStatus('Thanks — we received your note and will be in touch.', 'is-ok');
         form.reset();
         return;
       }
 
-      if (!name) {
-        setStatus('Please add your name.', 'is-err');
-        if (nameInput) nameInput.focus();
+      if (!name || !email || !message) {
+        // Let browser required attrs handle empty fields when possible
         return;
       }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        e.preventDefault();
         setStatus('Please enter a valid work email.', 'is-err');
         if (emailInput) emailInput.focus();
         return;
       }
-      if (!message) {
-        setStatus('Tell us a bit about how we can help.', 'is-err');
-        if (bodyInput) bodyInput.focus();
-        return;
-      }
 
-      var endpoint = form.getAttribute('action');
-      if (!endpoint) {
-        setStatus('Form is not configured yet. Please try again later.', 'is-err');
-        return;
+      // Personalize autoresponse with name (still classic POST)
+      if (autoEl) {
+        autoEl.value =
+          'Hi ' + name + ',\n\n' +
+          'Thanks for reaching out to Nakara. We received your inquiry and look forward to speaking with you.\n\n' +
+          'Someone from our team will follow up shortly.\n\n' +
+          'To make sure our reply reaches your inbox (not spam):\n' +
+          '• Add hello@nakara.ai to your contacts\n' +
+          '• If a Nakara email lands in spam or junk, mark it Not spam\n' +
+          '• If your company uses email filters, whitelist the domain nakara.ai\n\n' +
+          '— Nakara\n' +
+          'https://nakara.ai';
       }
 
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending…';
       }
-      setStatus('');
-
-      var payload = {
-        name: name,
-        email: email,
-        message: message,
-        _subject: 'Nakara — conversation request',
-        _template: 'table',
-        _captcha: 'false',
-        _cc: 'jb@nakara.ai',
-        _replyto: email,
-        _autoresponse:
-          'Hi ' + name + ',\n\n' +
-          'Thanks for reaching out to Nakara. We received your inquiry and look forward to speaking with you.\n\n' +
-          'Someone from our team will follow up shortly.\n\n' +
-          'To make sure our reply reaches your inbox (not spam):\n' +
-          '• Add hello@nakara.ai to your contacts\n' +
-          '• If a Nakara email lands in spam or junk, mark it “Not spam”\n' +
-          '• If your company uses email filters, whitelist the domain nakara.ai\n\n' +
-          '— Nakara\n' +
-          'https://nakara.ai'
-      };
-
-      fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json'
-        },
-        body: JSON.stringify(payload)
-      })
-        .then(function (res) {
-          return res.json().catch(function () { return {}; }).then(function (data) {
-            return { ok: res.ok, data: data };
-          });
-        })
-        .then(function (result) {
-          if (result.ok || (result.data && (result.data.success === 'true' || result.data.success === true))) {
-            setStatus('Thanks — we received your note and will be in touch.', 'is-ok');
-            form.reset();
-          } else {
-            var errMsg = (result.data && (result.data.message || result.data.error)) ||
-              'Something went wrong. Please try again in a moment.';
-            setStatus(errMsg, 'is-err');
-          }
-        })
-        .catch(function () {
-          setStatus('Could not send right now. Please try again in a moment.', 'is-err');
-        })
-        .finally(function () {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = defaultBtnLabel;
-          }
-        });
+      // Native submit continues → FormSubmit → autoresponse email → redirect back
     });
   }
 

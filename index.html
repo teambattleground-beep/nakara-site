@@ -504,14 +504,26 @@
           class="cta__form"
           id="cta-form"
           method="POST"
-          action="https://formsubmit.co/ajax/96b420123c1a4823ca752f2df9bb4162"
-          novalidate
+          action="https://formsubmit.co/96b420123c1a4823ca752f2df9bb4162"
         >
-          <!-- FormSubmit form ID (hello@nakara.ai). Autoresponse + CC set in script.js -->
+          <!-- Classic POST (not AJAX): FormSubmit autoresponse requires non-AJAX + captcha on -->
           <input type="hidden" name="_subject" value="Nakara — conversation request" />
           <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_cc" value="jb@nakara.ai" />
+          <input type="hidden" name="_next" value="https://nakara.ai/?thanks=1#cta" />
+          <input type="hidden" name="_autoresponse" id="cta-autoresponse" value="Hi,
+
+Thanks for reaching out to Nakara. We received your inquiry and look forward to speaking with you.
+
+Someone from our team will follow up shortly.
+
+To make sure our reply reaches your inbox (not spam):
+• Add hello@nakara.ai to your contacts
+• If a Nakara email lands in spam or junk, mark it Not spam
+• If your company uses email filters, whitelist the domain nakara.ai
+
+— Nakara
+https://nakara.ai" />
           <input type="text" name="_honey" class="cta__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="cta__field">
