@@ -131,7 +131,19 @@
         message: message,
         _subject: 'Nakara — conversation request',
         _template: 'table',
-        _captcha: 'false'
+        _captcha: 'false',
+        _cc: 'jb@nakara.ai',
+        _replyto: email,
+        _autoresponse:
+          'Hi ' + name + ',\n\n' +
+          'Thanks for reaching out to Nakara. We received your inquiry and look forward to speaking with you.\n\n' +
+          'Someone from our team will follow up shortly.\n\n' +
+          'To make sure our reply reaches your inbox (not spam):\n' +
+          '• Add hello@nakara.ai to your contacts\n' +
+          '• If a Nakara email lands in spam or junk, mark it “Not spam”\n' +
+          '• If your company uses email filters, whitelist the domain nakara.ai\n\n' +
+          '— Nakara\n' +
+          'https://nakara.ai'
       };
 
       fetch(endpoint, {
