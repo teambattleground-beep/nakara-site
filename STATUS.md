@@ -14,7 +14,8 @@
 | v3 | `8a2e863` | HR headcount-planning language (superseded) |
 | v4 | `4679720` | Honest pre-launch polish (still HR framing — superseded) |
 | v4.1 | `5d53223` | Temporary geometric 中 logo |
-| **v5** | **`f9207b2`** | **AI employees / AI solutions for businesses** — correct product narrative |
+| **v5.1** | **`6cc5b19`** | Hero eyebrow: Outcomes. Not software. |
+| v5 | **`f9207b2`** | **AI employees / AI solutions for businesses** — correct product narrative |
 
 ## Product narrative (locked for public site)
 
