@@ -1595,10 +1595,12 @@ button { font-family: inherit; }
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center 28%;
-  background: #0a2540;
-  border: 1px solid rgba(255,255,255,0.12);
+  object-fit: contain;
+  object-position: center;
+  padding: 3px;
+  background: #0b1f36;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-sizing: border-box;
 }
 .nk-chat__launcher-dot {
   width: 8px; height: 8px; border-radius: 50%;
@@ -1615,10 +1617,12 @@ button { font-family: inherit; }
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center 28%;
-  background: #0a2540;
-  border: 1px solid rgba(255,255,255,0.1);
+  object-fit: contain;
+  object-position: center;
+  padding: 4px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-sizing: border-box;
   flex-shrink: 0;
 }
 .nk-chat__launcher-label {

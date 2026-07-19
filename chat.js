@@ -229,7 +229,7 @@
     launcher.type = 'button';
     launcher.setAttribute('aria-label', 'Chat with Naka');
     launcher.innerHTML =
-      '<img class="nk-chat__launcher-face" src="assets/og-robot-navy-1200.jpg?v=naka8" width="28" height="28" alt="" />' +
+      '<img class="nk-chat__launcher-face" src="assets/logo-mark.png?v=naka9" width="28" height="28" alt="" />' +
       '<span class="nk-chat__launcher-label">Naka</span>';
 
     var panel = el('div', 'nk-chat__panel');
@@ -240,7 +240,7 @@
     var head = el('div', 'nk-chat__head');
     head.innerHTML =
       '<div class="nk-chat__head-brand">' +
-      '<img class="nk-chat__head-face" src="assets/og-robot-navy-1200.jpg?v=naka8" width="40" height="40" alt="" />' +
+      '<img class="nk-chat__head-face" src="assets/logo-mark.png?v=naka9" width="40" height="40" alt="" />' +
       '<div class="nk-chat__head-text">' +
       '<p class="nk-chat__title">Naka</p>' +
       '<p class="nk-chat__sub">Your Nakara teammate — ask anything, or leave a note for the team.</p>' +
