@@ -9,7 +9,7 @@
 
 | Ver | Commit | Notes |
 |-----|--------|--------|
-| **v5.14** | **pending** | Meet **Naka** — single AI teammate face; chat avatar; simplify away from multi-agent menu |
+| **v5.14** | **`75896dd`** | Meet **Naka** — single AI teammate face; chat avatar; simplify away from multi-agent menu |
 | **v5.13** | **`0a47d67`** | Live demo hub `/demo.html` (4 pillars) + Reimer execution plan |
 | **v5.12** | **`0c19091`** | Services menu page (`services.html`) — noindex, not in main nav; full capability list for sharing |
 | **v5.11** | **`87a698c`** | Site chat widget (FAQ + lead capture); Apps Script chat leads; voice lab pack |
