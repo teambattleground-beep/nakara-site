@@ -8,7 +8,7 @@
   var CFG = window.NAKARA_CHAT || {};
   var LEAD_ENDPOINT =
     CFG.endpoint ||
-    'https://script.google.com/macros/s/AKfycbzJhiXtPDTdmvsi_pHm7l8Jtxs99NT-XTstBy3sZSDYAXVXu7heHGK5jdyn5Tua6Mog/exec';
+    'https://script.google.com/macros/s/AKfycbz8DN-GAP3gkDnMw3RtM542jl2n8a5HpKWuK1e96a7IAwZ593bRHPiTGXoksH8WXNjY/exec';
   var CHAT_API =
     CFG.apiUrl ||
     'https://naka-chat-api.onrender.com';
