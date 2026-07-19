@@ -2351,3 +2351,24 @@ button { font-family: inherit; }
     gap: 3rem;
   }
 }
+
+
+.naka__live {
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.naka__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
