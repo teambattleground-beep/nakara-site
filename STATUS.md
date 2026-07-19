@@ -9,6 +9,7 @@
 
 | Ver | Commit | Notes |
 |-----|--------|--------|
+| **v5.15** | **pending** | Site logo → **Naka mascot** (retire enso cyan/green mark) |
 | **v5.14** | **`75896dd`** | Meet **Naka** — single AI teammate face; chat avatar; simplify away from multi-agent menu |
 | **v5.13** | **`0a47d67`** | Live demo hub `/demo.html` (4 pillars) + Reimer execution plan |
 | **v5.12** | **`0c19091`** | Services menu page (`services.html`) — noindex, not in main nav; full capability list for sharing |
