@@ -1,17 +1,21 @@
-/* Nakara site chat — Front-desk style intake widget (v1)
- * FAQ + guided Q&A + lead capture → same Apps Script as CTA form.
- * Optional: set window.NAKARA_CHAT.phone when voice lab number is live.
+/* Nakara site chat — Naka intelligent front-desk widget (v2)
+ * LLM via Naka Chat API (OpenRouter) + lead capture → Apps Script.
+ * Optional: window.NAKARA_CHAT = { apiUrl, phone, phoneDisplay, endpoint }
  */
 (function () {
   'use strict';
 
   var CFG = window.NAKARA_CHAT || {};
-  var ENDPOINT =
+  var LEAD_ENDPOINT =
     CFG.endpoint ||
     'https://script.google.com/macros/s/AKfycbzJhiXtPDTdmvsi_pHm7l8Jtxs99NT-XTstBy3sZSDYAXVXu7heHGK5jdyn5Tua6Mog/exec';
-  var PHONE = CFG.phone || ''; // e.g. '+1-XXX-XXX-XXXX' when live
+  var CHAT_API =
+    CFG.apiUrl ||
+    'https://naka-chat-api.onrender.com';
+  var PHONE = CFG.phone || '';
   var PHONE_DISPLAY = CFG.phoneDisplay || PHONE;
 
+  /* Offline fallbacks if API is cold/down */
   var FAQS = [
     {
       keys: ['what is nakara', 'who are you', 'what do you do', 'nakara'],
@@ -31,37 +35,7 @@
     {
       keys: ['voice', 'phone', 'call', 'front desk', 'after hours'],
       answer:
-        'Yes — front-desk voice is part of what we build: answer when you’re busy, qualify leads, book appointments, and hand off anything sensitive. We’re standing up a live demo line; leave your number if you want a call-back walkthrough.'
-    },
-    {
-      keys: ['chatbot', 'chat bot', 'website chat'],
-      answer:
-        'Website chat is one channel. The product is the teammate behind it — same standards on phone, chat, and follow-up, with a human when it matters.'
-    },
-    {
-      keys: ['how it works', 'process', 'start', 'begin', 'onboard'],
-      answer:
-        'Discover → Design → Deploy → Improve. Short discovery, clear recommendation (AI employee, solution, consulting, or not a fit), then pilot with real work.'
-    },
-    {
-      keys: ['consulting', 'without employee', 'just advice'],
-      answer:
-        'You don’t need an AI employee to work with us. Bring the problem — we can help with AI and technology consulting or a custom system only.'
-    },
-    {
-      keys: ['human', 'replace', 'jobs', 'staff'],
-      answer:
-        'Goal is capacity and less overload — not stripping the company of people. Most start by clearing backlogs so humans keep judgment and relationships.'
-    },
-    {
-      keys: ['security', 'privacy', 'data', 'safe'],
-      answer:
-        'Escalation and review are designed in. High-stakes work stays human. For a security or privacy conversation, email hello@nakara.ai or leave a note here.'
-    },
-    {
-      keys: ['where', 'location', 'virginia', 'based'],
-      answer:
-        'Nakara LLC is based in Virginia, USA. We work with US businesses.'
+        'Yes — front-desk voice is part of what we build: answer when you’re busy, qualify leads, book appointments, and hand off anything sensitive. Leave a note if you want a walkthrough.'
     },
     {
       keys: ['contact', 'email', 'talk', 'call me', 'human please', 'speak to someone'],
@@ -72,9 +46,10 @@
 
   var state = {
     open: false,
-    step: 'chat', // chat | lead | done
+    step: 'chat',
     messages: [],
-    lead: { name: '', email: '', phone: '' }
+    sessionId: null,
+    busy: false
   };
 
   function el(tag, cls, html) {
@@ -101,13 +76,13 @@
     );
   }
 
-  function botReply(text) {
+  function fallbackReply(text) {
     var faq = matchFaq(text);
     if (faq) return faq;
     if (wantsHuman(text)) {
       return 'I can have the team follow up. What’s the best name and work email? (You can also add a phone.)';
     }
-    return 'Good question. I’m best on what Nakara is, AI employees, how we work, voice/front desk, and getting you to the team. Try one of those — or leave your email and a human will answer properly.';
+    return 'I’m having a slow moment reaching my full brain. Ask about Nakara, AI employees, voice/front desk — or leave your email and a human will answer properly.';
   }
 
   function transcriptText() {
@@ -116,6 +91,15 @@
         return (m.role === 'user' ? 'Visitor' : 'Nakara') + ': ' + m.text;
       })
       .join('\n');
+  }
+
+  function historyForApi() {
+    return state.messages.slice(-12).map(function (m) {
+      return {
+        role: m.role === 'user' ? 'user' : 'assistant',
+        content: m.text
+      };
+    });
   }
 
   function addMsg(role, text) {
@@ -127,6 +111,19 @@
       log.appendChild(row);
       log.scrollTop = log.scrollHeight;
     }
+  }
+
+  function setTyping(on) {
+    var log = document.getElementById('nk-chat-log');
+    if (!log) return;
+    var existing = document.getElementById('nk-chat-typing');
+    if (existing) existing.remove();
+    if (!on) return;
+    var row = el('div', 'nk-chat__msg nk-chat__msg--bot nk-chat__msg--typing');
+    row.id = 'nk-chat-typing';
+    row.textContent = 'Naka is typing…';
+    log.appendChild(row);
+    log.scrollTop = log.scrollHeight;
   }
 
   function setStep(step) {
@@ -143,6 +140,61 @@
     }
   }
 
+  function offerLeadButton() {
+    var go = el('button', 'nk-chat__chip nk-chat__chip--cta', 'Leave contact details');
+    go.type = 'button';
+    go.addEventListener('click', function () {
+      setStep('lead');
+    });
+    var logEl = document.getElementById('nk-chat-log');
+    if (logEl) {
+      var wrap = el('div', 'nk-chat__msg nk-chat__msg--bot');
+      wrap.appendChild(go);
+      logEl.appendChild(wrap);
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+  }
+
+  function llmReply(text) {
+    var hist = historyForApi();
+    // Don't include the message we just added twice — history already has it as last user
+    // Actually we add user msg before calling; historyForApi includes it. Send history without duplicating:
+    var prior = hist.slice(0, -1);
+    var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timer = setTimeout(function () {
+      if (controller) controller.abort();
+    }, 55000);
+
+    var opts = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: text,
+        history: prior,
+        session_id: state.sessionId || undefined
+      })
+    };
+    if (controller) opts.signal = controller.signal;
+
+    return fetch(CHAT_API.replace(/\/$/, '') + '/chat', opts)
+      .then(function (r) {
+        clearTimeout(timer);
+        if (!r.ok) throw new Error('chat http ' + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        if (data.session_id) state.sessionId = data.session_id;
+        return {
+          reply: (data.reply || '').trim() || fallbackReply(text),
+          suggestLead: !!data.suggest_lead
+        };
+      })
+      .catch(function () {
+        clearTimeout(timer);
+        return { reply: fallbackReply(text), suggestLead: wantsHuman(text) };
+      });
+  }
+
   function submitLead(name, email, phone, note) {
     var message =
       (note || 'Website chat — please follow up.') +
@@ -157,8 +209,7 @@
     body.set('ajax', '1');
     body.set('transcript', transcriptText().slice(0, 8000));
 
-    // no-cors: Apps Script will still process; we can't read body reliably
-    return fetch(ENDPOINT, {
+    return fetch(LEAD_ENDPOINT, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -201,7 +252,6 @@
 
     var body = el('div', 'nk-chat__body');
 
-    // Chat pane
     var chatPane = el('div', 'nk-chat__pane');
     chatPane.id = 'nk-chat-pane';
     var log = el('div', 'nk-chat__log');
@@ -238,7 +288,6 @@
     chatPane.appendChild(chips);
     chatPane.appendChild(form);
 
-    // Lead pane
     var leadPane = el('div', 'nk-chat__pane');
     leadPane.id = 'nk-lead-pane';
     leadPane.hidden = true;
@@ -294,26 +343,22 @@
 
     function sendUser(text) {
       text = (text || '').trim();
-      if (!text) return;
+      if (!text || state.busy) return;
       addMsg('user', text);
-      var reply = botReply(text);
-      setTimeout(function () {
-        addMsg('bot', reply);
-        if (wantsHuman(text) || /leave your name|follow up|work email/i.test(reply)) {
-          var go = el('button', 'nk-chat__chip nk-chat__chip--cta', 'Leave contact details');
-          go.type = 'button';
-          go.addEventListener('click', function () {
-            setStep('lead');
-          });
-          var logEl = document.getElementById('nk-chat-log');
-          if (logEl) {
-            var wrap = el('div', 'nk-chat__msg nk-chat__msg--bot');
-            wrap.appendChild(go);
-            logEl.appendChild(wrap);
-            logEl.scrollTop = logEl.scrollHeight;
-          }
+      state.busy = true;
+      setTyping(true);
+      var sendBtn = form.querySelector('.nk-chat__send');
+      if (sendBtn) sendBtn.disabled = true;
+
+      llmReply(text).then(function (res) {
+        setTyping(false);
+        addMsg('bot', res.reply);
+        if (res.suggestLead || wantsHuman(text) || /leave your name|follow up|work email|leave a note|talk to the team/i.test(res.reply)) {
+          offerLeadButton();
         }
-      }, 280);
+        state.busy = false;
+        if (sendBtn) sendBtn.disabled = false;
+      });
     }
 
     form.addEventListener('submit', function (e) {
