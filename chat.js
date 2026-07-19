@@ -176,21 +176,24 @@
 
     var launcher = el('button', 'nk-chat__launcher', '');
     launcher.type = 'button';
-    launcher.setAttribute('aria-label', 'Open chat');
+    launcher.setAttribute('aria-label', 'Chat with Naka');
     launcher.innerHTML =
-      '<span class="nk-chat__launcher-dot" aria-hidden="true"></span><span class="nk-chat__launcher-label">Chat</span>';
+      '<img class="nk-chat__launcher-face" src="assets/naka/naka-mascot.png" width="28" height="28" alt="" />' +
+      '<span class="nk-chat__launcher-label">Naka</span>';
 
     var panel = el('div', 'nk-chat__panel');
     panel.hidden = true;
     panel.setAttribute('role', 'dialog');
-    panel.setAttribute('aria-label', 'Nakara chat');
+    panel.setAttribute('aria-label', 'Chat with Naka');
 
     var head = el('div', 'nk-chat__head');
     head.innerHTML =
+      '<div class="nk-chat__head-brand">' +
+      '<img class="nk-chat__head-face" src="assets/naka/naka-mascot.png" width="40" height="40" alt="" />' +
       '<div class="nk-chat__head-text">' +
-      '<p class="nk-chat__title">Nakara</p>' +
-      '<p class="nk-chat__sub">Ask a quick question — or leave a note for the team.</p>' +
-      '</div>';
+      '<p class="nk-chat__title">Naka</p>' +
+      '<p class="nk-chat__sub">Your Nakara teammate — ask anything, or leave a note for the team.</p>' +
+      '</div></div>';
     var close = el('button', 'nk-chat__close', '×');
     close.type = 'button';
     close.setAttribute('aria-label', 'Close chat');
@@ -270,7 +273,7 @@
       if (state.messages.length === 0) {
         addMsg(
           'bot',
-          'Hi — I’m the Nakara site assistant. Ask about AI employees, how we work, or voice front desk. Want a human? Say “talk to the team.”'
+          'Hi — I’m Naka, your Nakara teammate. I can help with what we do, voice and chat front desk, or connect you to the team. What are you working on?'
         );
       }
       var input = document.getElementById('nk-chat-input');

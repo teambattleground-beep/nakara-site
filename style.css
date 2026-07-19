@@ -1582,7 +1582,7 @@ button { font-family: inherit; }
   gap: 0.55rem;
   border: 0;
   cursor: pointer;
-  padding: 0.85rem 1.15rem;
+  padding: 0.55rem 1.05rem 0.55rem 0.55rem;
   border-radius: 999px;
   background: var(--navy-900);
   color: var(--white);
@@ -1590,10 +1590,31 @@ button { font-family: inherit; }
   transition: transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
 }
 .nk-chat__launcher:hover { transform: translateY(-1px); background: var(--navy-800); }
+.nk-chat__launcher-face {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--white);
+}
 .nk-chat__launcher-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: #7dcea0;
   box-shadow: 0 0 0 4px rgba(125, 206, 160, 0.2);
+}
+.nk-chat__head-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+.nk-chat__head-face {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--white);
+  flex-shrink: 0;
 }
 .nk-chat__launcher-label {
   font-size: 0.92rem;
@@ -2247,4 +2268,56 @@ button { font-family: inherit; }
   .demo-pillar__num { grid-row: auto; }
   .demo-pillar__p { grid-column: auto; }
   .demo-pillar__status { grid-column: auto; grid-row: auto; justify-self: start; margin-top: 0.65rem; }
+}
+
+/* =========================================================
+   Meet Naka (main site)
+   ========================================================= */
+.naka {
+  padding: 5rem 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.naka__inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+.naka__lead {
+  margin: 0.75rem 0 1.25rem;
+  font-size: 1.08rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 34rem;
+}
+.naka__list {
+  margin: 0 0 1.75rem;
+  padding: 0 0 0 1.15rem;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 32rem;
+}
+.naka__list li { margin-bottom: 0.45rem; }
+.naka__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.25rem;
+}
+.naka__visual {
+  display: flex;
+  justify-content: center;
+}
+.naka__lockup {
+  width: min(100%, 380px);
+  height: auto;
+  filter: drop-shadow(0 16px 40px rgba(6, 24, 46, 0.12));
+}
+@media (min-width: 900px) {
+  .naka__inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+  }
 }
