@@ -1596,7 +1596,9 @@ button { font-family: inherit; }
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  background: var(--white);
+  object-position: center 28%;
+  background: #0a2540;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 .nk-chat__launcher-dot {
   width: 8px; height: 8px; border-radius: 50%;
@@ -1614,7 +1616,9 @@ button { font-family: inherit; }
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  background: var(--white);
+  object-position: center 28%;
+  background: #0a2540;
+  border: 1px solid rgba(255,255,255,0.1);
   flex-shrink: 0;
 }
 .nk-chat__launcher-label {
