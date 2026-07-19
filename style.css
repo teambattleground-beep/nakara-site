@@ -1595,9 +1595,9 @@ button { font-family: inherit; }
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  object-fit: contain;
-  object-position: center;
-  padding: 3px;
+  object-fit: cover;
+  object-position: center 35%;
+  padding: 0;
   background: #0b1f36;
   border: 1px solid rgba(255,255,255,0.14);
   box-sizing: border-box;
@@ -1617,9 +1617,9 @@ button { font-family: inherit; }
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: contain;
-  object-position: center;
-  padding: 4px;
+  object-fit: cover;
+  object-position: center 35%;
+  padding: 0;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
   box-sizing: border-box;
