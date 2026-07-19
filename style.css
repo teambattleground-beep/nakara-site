@@ -1625,8 +1625,8 @@ button { font-family: inherit; }
   position: absolute;
   right: 0;
   bottom: calc(100% + 0.75rem);
-  width: min(380px, calc(100vw - 1.5rem));
-  height: min(540px, calc(100vh - 6rem));
+  width: min(420px, calc(100vw - 1.25rem));
+  height: min(640px, calc(100vh - 5.5rem));
   display: flex;
   flex-direction: column;
   background: var(--white);
@@ -1635,36 +1635,43 @@ button { font-family: inherit; }
   box-shadow: 0 18px 50px rgba(6, 24, 46, 0.18);
   overflow: hidden;
 }
+/* display:flex above beats the UA [hidden] rule — force hide when attribute set */
+.nk-chat__panel[hidden],
+.nk-chat__pane[hidden] {
+  display: none !important;
+}
 .nk-chat__head {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 1rem 1rem 0.85rem;
+  padding: 1.05rem 1.1rem 0.95rem;
   background: var(--navy-900);
   color: var(--white);
+  flex-shrink: 0;
 }
 .nk-chat__title {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
 .nk-chat__sub {
-  margin: 0.25rem 0 0;
-  font-size: 0.82rem;
-  line-height: 1.4;
+  margin: 0.28rem 0 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
   color: #B8C2D2;
 }
 .nk-chat__close {
   border: 0;
   background: transparent;
   color: #B8C2D2;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   line-height: 1;
   cursor: pointer;
-  padding: 0.1rem 0.35rem;
+  padding: 0.15rem 0.4rem;
   border-radius: 6px;
+  flex-shrink: 0;
 }
 .nk-chat__close:hover { color: var(--white); background: rgba(255,255,255,0.08); }
 .nk-chat__body {
@@ -1673,27 +1680,31 @@ button { font-family: inherit; }
   display: flex;
   flex-direction: column;
   background: var(--paper);
+  overflow: hidden;
 }
 .nk-chat__pane {
   flex: 1;
   min-height: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .nk-chat__log {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 10rem;
   overflow-y: auto;
-  padding: 0.9rem 0.9rem 0.4rem;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 1rem 0.55rem;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
+  gap: 0.65rem;
 }
 .nk-chat__msg {
-  max-width: 92%;
-  padding: 0.65rem 0.8rem;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  line-height: 1.45;
+  max-width: 90%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  font-size: 0.94rem;
+  line-height: 1.5;
   white-space: pre-wrap;
 }
 .nk-chat__msg--bot {
@@ -1712,16 +1723,18 @@ button { font-family: inherit; }
 .nk-chat__chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  padding: 0.35rem 0.9rem 0.55rem;
+  gap: 0.45rem;
+  padding: 0.45rem 1rem 0.65rem;
+  flex-shrink: 0;
+  background: var(--paper);
 }
 .nk-chat__chip {
   border: 1px solid var(--line);
   background: var(--white);
   color: var(--ink-soft);
   border-radius: 999px;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.78rem;
+  padding: 0.42rem 0.8rem;
+  font-size: 0.82rem;
   cursor: pointer;
   transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
 }
@@ -1738,30 +1751,32 @@ button { font-family: inherit; }
   width: 100%;
   justify-content: center;
   margin-top: 0.15rem;
-  padding: 0.45rem 0.7rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 8px;
   background: var(--navy-900);
   color: var(--white);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 560;
 }
 .nk-chat__compose {
   display: flex;
-  gap: 0.4rem;
-  padding: 0.65rem 0.75rem 0.85rem;
+  gap: 0.45rem;
+  padding: 0.75rem 0.9rem 0.95rem;
   border-top: 1px solid var(--line);
   background: var(--white);
+  flex-shrink: 0;
 }
 .nk-chat__input,
 .nk-chat__finput {
   flex: 1;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.94rem;
   color: var(--ink);
   background: var(--white);
+  min-width: 0;
 }
 .nk-chat__input:focus,
 .nk-chat__finput:focus {
@@ -1770,51 +1785,57 @@ button { font-family: inherit; }
 }
 .nk-chat__send {
   border: 0;
-  border-radius: 8px;
-  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
   background: var(--navy-900);
   color: var(--white);
   font-weight: 560;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   cursor: pointer;
+  flex-shrink: 0;
 }
 .nk-chat__send:hover { background: var(--navy-800); }
 .nk-chat__send:disabled { opacity: 0.6; cursor: default; }
-.nk-chat__send--block { width: 100%; margin-top: 0.35rem; }
+.nk-chat__send--block { width: 100%; margin-top: 0.45rem; }
 .nk-chat__lead-intro {
   margin: 0;
-  padding: 0.9rem 1rem 0.2rem;
-  font-size: 0.9rem;
+  padding: 1rem 1.1rem 0.35rem;
+  font-size: 0.94rem;
+  line-height: 1.45;
   color: var(--ink-soft);
+  flex-shrink: 0;
 }
 .nk-chat__lead-form {
-  padding: 0.5rem 1rem 1rem;
+  flex: 1;
+  min-height: 0;
+  padding: 0.35rem 1.1rem 1.1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.4rem;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .nk-chat__flab {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 560;
   color: var(--muted);
-  margin-top: 0.35rem;
+  margin-top: 0.4rem;
 }
 .nk-chat__opt { font-weight: 400; }
-.nk-chat__fta { resize: vertical; min-height: 4.5rem; }
+.nk-chat__fta { resize: vertical; min-height: 5rem; }
 .nk-chat__back {
   border: 0;
   background: transparent;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   cursor: pointer;
-  padding: 0.45rem 0;
+  padding: 0.55rem 0 0.2rem;
   text-align: left;
 }
 .nk-chat__status {
-  margin: 0.35rem 0 0;
-  font-size: 0.82rem;
-  line-height: 1.4;
+  margin: 0.4rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 .nk-chat__status.is-ok { color: #1f6b45; }
 .nk-chat__status.is-err { color: #9b2c2c; }
@@ -1825,9 +1846,12 @@ button { font-family: inherit; }
     position: fixed;
     right: 0.5rem;
     left: 0.5rem;
-    bottom: 4.5rem;
+    bottom: 4.75rem;
     width: auto;
-    height: min(70vh, 560px);
+    height: min(78vh, 680px);
+  }
+  .nk-chat__sub {
+    font-size: 0.8rem;
   }
 }
 /* =========================================================
