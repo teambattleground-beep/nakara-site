@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Nakara live demo — voice front desk, website chat, reactivation, and reputation. Shareable proof hub (not linked from main nav)." />
+  <title>Nakara — Live demo</title>
+  <link rel="icon" type="image/png" href="assets/logo-mark.png?v=enso1" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=enso1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-demo">
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Nakara home">
+        <img src="assets/logo-mark.png?v=enso1" alt="" class="nav__logo-mark" width="40" height="40" />
+        <span class="nav__wordmark">Nakara</span>
+      </a>
+      <nav class="nav__links" aria-label="On this page">
+        <a href="#pillars">Four pillars</a>
+        <a href="#voice">Voice</a>
+        <a href="#chat">Chat</a>
+        <a href="#next">What’s next</a>
+      </nav>
+      <a href="index.html#cta" class="btn btn--ghost nav__cta">Talk to us</a>
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobile-menu" hidden>
+      <a href="#pillars">Four pillars</a>
+      <a href="#voice">Voice</a>
+      <a href="#chat">Chat</a>
+      <a href="#next">What’s next</a>
+      <a href="index.html#cta" class="btn btn--ghost">Talk to us</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="demo-hero">
+      <div class="container demo-hero__inner">
+        <p class="section-label">Shareable live demo</p>
+        <h1 class="demo-hero__h">Try the front desk. Not a slide deck.</h1>
+        <p class="demo-hero__sub">This page is Nakara’s working proof of a four-part AI employee system for local and service businesses — voice, chat, follow-up, and reputation. Not linked from the main site; share the URL when you want someone to experience it.</p>
+        <p class="demo-hero__proof">Outcomes we sell: <strong>availability</strong>, <strong>reactivation</strong>, <strong>reputation</strong> — which show up as revenue.</p>
+        <div class="demo-hero__actions">
+          <a href="#voice" class="btn btn--primary">Try voice</a>
+          <a href="#chat" class="btn btn--ghost">Try chat</a>
+          <a href="services.html" class="hero__link">Full services menu &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-pillars" id="pillars">
+      <div class="container">
+        <p class="section-label">The system</p>
+        <h2 class="section-h">Four pillars. One teammate story.</h2>
+        <p class="demo-lead">Most people sell a single bot. Businesses pay for the bundle that stops leaks in four places at once.</p>
+        <div class="demo-pillars__grid">
+          <a class="demo-pillar" href="#voice">
+            <span class="demo-pillar__num">01</span>
+            <span class="demo-pillar__h">Voice</span>
+            <span class="demo-pillar__p">Phone answered when you’re on a job or closed.</span>
+            <span class="demo-pillar__status demo-pillar__status--live" id="voice-status-badge">Lab</span>
+          </a>
+          <a class="demo-pillar" href="#chat">
+            <span class="demo-pillar__num">02</span>
+            <span class="demo-pillar__h">Chat</span>
+            <span class="demo-pillar__p">Website visitors get answers and you get real leads.</span>
+            <span class="demo-pillar__status demo-pillar__status--live">Live</span>
+          </a>
+          <a class="demo-pillar" href="#reactivation">
+            <span class="demo-pillar__num">03</span>
+            <span class="demo-pillar__h">Reactivation</span>
+            <span class="demo-pillar__p">Old customers and stalled leads get a polite second chance.</span>
+            <span class="demo-pillar__status">Preview</span>
+          </a>
+          <a class="demo-pillar" href="#reputation">
+            <span class="demo-pillar__num">04</span>
+            <span class="demo-pillar__h">Reputation</span>
+            <span class="demo-pillar__p">Happy clients asked for reviews; low scores alert a human.</span>
+            <span class="demo-pillar__status">Preview</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICE -->
+    <section class="demo-block" id="voice">
+      <div class="container demo-block__grid">
+        <div>
+          <p class="section-label">Pillar 01</p>
+          <h2 class="section-h">Voice front desk</h2>
+          <p class="demo-lead">Call Nakara’s own line. Ask what we do, say you’re a local business, try to book a conversation. Notice how it qualifies and hands off — that’s the product.</p>
+          <ul class="demo-list">
+            <li>Answers in a calm, human pace</li>
+            <li>Qualifies with simple must-haves</li>
+            <li>Takes details or points you to the team</li>
+            <li>High-stakes topics stay human</li>
+          </ul>
+        </div>
+        <div class="demo-card" id="voice-card">
+          <p class="demo-card__kicker">Call the demo line</p>
+          <p class="demo-card__number" id="demo-phone-display">Number coming today</p>
+          <p class="demo-card__hint" id="demo-phone-hint">We’re standing up Nakara’s lab line. When live, the number appears here and in chat.</p>
+          <a class="btn btn--primary demo-card__btn" id="demo-phone-btn" href="index.html#cta" hidden>Call now</a>
+          <p class="demo-card__fine">Inbound demo only. No sales pressure on the call — you’re testing the teammate.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAT -->
+    <section class="demo-block demo-block--alt" id="chat">
+      <div class="container demo-block__grid">
+        <div>
+          <p class="section-label">Pillar 02</p>
+          <h2 class="section-h">Website chat</h2>
+          <p class="demo-lead">Open the chat button on this page (bottom right). Ask what Nakara is, how voice works, or say you want to talk to the team and leave a note.</p>
+          <ul class="demo-list">
+            <li>Instant answers on common questions</li>
+            <li>Path to a human with name + work email</li>
+            <li>Same calm tone as the rest of the brand</li>
+          </ul>
+          <button type="button" class="btn btn--primary" id="demo-open-chat">Open chat</button>
+        </div>
+        <div class="demo-card">
+          <p class="demo-card__kicker">Try saying</p>
+          <ul class="demo-card__prompts">
+            <li>“What is an AI employee?”</li>
+            <li>“Do you do voice front desk?”</li>
+            <li>“I want to talk to someone”</li>
+          </ul>
+          <p class="demo-card__fine">Leads go to the Nakara team — use a real email if you want a reply.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REACTIVATION -->
+    <section class="demo-block" id="reactivation">
+      <div class="container demo-block__grid">
+        <div>
+          <p class="section-label">Pillar 03 · Preview</p>
+          <h2 class="section-h">Database reactivation</h2>
+          <p class="demo-lead">Most businesses pay for new leads while old ones sit cold. This pillar reaches people who already know the name — with consent and stop rules.</p>
+          <ul class="demo-list">
+            <li>Segment: past buyers, inquired-never-bought, lapsed</li>
+            <li>Polite multi-step follow-up you approve</li>
+            <li>Book or hand off — not spam theater</li>
+          </ul>
+        </div>
+        <div class="demo-card demo-card--preview">
+          <p class="demo-card__kicker">Example message (preview)</p>
+          <div class="demo-sms">
+            <p>Hi Jordan — it’s Alex with Lakeside HVAC. You asked about a system tune-up last fall. We’ve got spring openings this week if you still want on the list. Prefer a quick text or a call?</p>
+          </div>
+          <p class="demo-card__fine">Preview only on this page. Live client campaigns need list consent and legal gates before send.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPUTATION -->
+    <section class="demo-block demo-block--alt" id="reputation">
+      <div class="container demo-block__grid">
+        <div>
+          <p class="section-label">Pillar 04 · Preview</p>
+          <h2 class="section-h">Reputation</h2>
+          <p class="demo-lead">Happy customers forget to review. Unhappy ones don’t. We make the ask easy after a good job — and alert a human when a rating needs care.</p>
+          <ul class="demo-list">
+            <li>Timely review request after a good experience</li>
+            <li>Thank-you on five stars</li>
+            <li>Low-star → human alert, not autopilot spin</li>
+          </ul>
+        </div>
+        <div class="demo-card demo-card--preview">
+          <p class="demo-card__kicker">Example flow (preview)</p>
+          <ol class="demo-flow">
+            <li>Job marked complete</li>
+            <li>Client gets a short, branded ask + link</li>
+            <li>5★ → thank-you · 1–2★ → owner notified</li>
+          </ol>
+          <p class="demo-card__fine">Ethical asks only — never fake reviews.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-next" id="next">
+      <div class="container">
+        <p class="section-label">For operators</p>
+        <h2 class="section-h">What you just saw is the product shape.</h2>
+        <p class="demo-lead">We implement this for local and service businesses as a managed front-desk system — not a toolkit you babysit. Start with voice + chat (Core), then add reactivation and reputation when the foundation is steady.</p>
+        <div class="demo-next__actions">
+          <a href="index.html#cta" class="btn btn--primary">Request a conversation</a>
+          <a href="services.html" class="hero__link">All services &rarr;</a>
+          <a href="agents.html" class="hero__link">AI employee profiles &rarr;</a>
+        </div>
+        <p class="demo-next__fence">Sensitive decisions stay human. We design handoffs before go-live.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo-lockup" aria-label="Nakara home">
+          <img src="assets/logo-mark.png?v=enso1" alt="" class="footer__logo-mark" width="40" height="40" />
+          <span class="footer__wordmark">Nakara</span>
+        </a>
+        <p class="footer__tag">Headcount. Reinvented.</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <p class="footer__h">Demo</p>
+          <a href="#voice">Voice</a>
+          <a href="#chat">Chat</a>
+          <a href="#reactivation">Reactivation</a>
+          <a href="#reputation">Reputation</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__h">Company</p>
+          <a href="index.html">Main site</a>
+          <a href="services.html">Services menu</a>
+          <a href="mailto:hello@nakara.ai">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <p>&copy; <span id="year"></span> Nakara LLC. All rights reserved.</p>
+      <p class="footer__quiet">Shareable live demo · not linked from main nav</p>
+    </div>
+  </footer>
+
+  <!-- Set when lab number is live:
+  <script>
+    window.NAKARA_CHAT = { phone: '+1XXXXXXXXXX', phoneDisplay: '(XXX) XXX-XXXX' };
+    window.NAKARA_DEMO = { phone: '+1XXXXXXXXXX', phoneDisplay: '(XXX) XXX-XXXX' };
+  </script>
+  -->
+  <script src="script.js"></script>
+  <script src="chat.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>

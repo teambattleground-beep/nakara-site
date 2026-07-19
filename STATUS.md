@@ -9,6 +9,7 @@
 
 | Ver | Commit | Notes |
 |-----|--------|--------|
+| **v5.13** | **pending** | Live demo hub `/demo.html` (4 pillars) + Reimer execution plan |
 | **v5.12** | **`0c19091`** | Services menu page (`services.html`) — noindex, not in main nav; full capability list for sharing |
 | **v5.11** | **`87a698c`** | Site chat widget (FAQ + lead capture); Apps Script chat leads; voice lab pack |
 | **v5.10** | **`b3e954c`** | Trial: enso + circuit 中 cyan glow mark (nav/footer/favicon). Geometric 中 backed up as `logo-*-prev-geometric*` |
