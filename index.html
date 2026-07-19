@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=naka11" />
+  <link rel="stylesheet" href="style.css?v=naka12" />
 </head>
 <body>
 
@@ -70,26 +70,50 @@
           <p class="hero__proof">Chat with Naka on this site · Call the live front desk · For owners who need capacity, not another dashboard.</p>
         </div>
 
-        <!-- Hero visual: Naka (brand), not generic dashboard -->
-        <div class="hero__visual">
-          <div class="hero-card">
-            <div class="hero-card__glow" aria-hidden="true"></div>
-            <img
-              src="assets/naka/naka-mascot-glow.png?v=naka7"
-              alt="Naka — Nakara AI teammate"
-              class="hero-card__img"
-              width="520"
-              height="520"
-              decoding="async"
-              fetchpriority="high"
-            />
-            <div class="hero-card__meta">
-              <p class="hero-card__badge"><span class="hero-card__dot" aria-hidden="true"></span> Naka · live</p>
-              <ul class="hero-card__chips">
-                <li>Site chat on</li>
-                <li>Phone front desk on</li>
-              </ul>
+        <!-- Hero visual: animated live product proof (chat + phone) -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero-stage">
+            <div class="hero-stage__glow"></div>
+
+            <!-- Phone card -->
+            <div class="hero-phone">
+              <div class="hero-phone__notch"></div>
+              <div class="hero-phone__screen">
+                <p class="hero-phone__label">Incoming · Naka</p>
+                <p class="hero-phone__num">(434) 455-5296</p>
+                <div class="hero-phone__wave">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p class="hero-phone__line hero-phone__line--a">“Thanks for calling Nakara…”</p>
+                <p class="hero-phone__line hero-phone__line--b">“How can I help you today?”</p>
+                <div class="hero-phone__status"><span class="hero-card__dot"></span> Live front desk</div>
+              </div>
             </div>
+
+            <!-- Chat card (overlaps) -->
+            <div class="hero-chat">
+              <div class="hero-chat__head">
+                <img src="assets/naka/Naka_Smile_Green.png?v=naka10" alt="" width="28" height="28" />
+                <div>
+                  <strong>Naka</strong>
+                  <span>Site chat · on</span>
+                </div>
+              </div>
+              <div class="hero-chat__log">
+                <div class="hero-chat__bubble hero-chat__bubble--user">Can you cover our phones?</div>
+                <div class="hero-chat__bubble hero-chat__bubble--bot">Yes — Naka answers, qualifies, and hands off cleanly.</div>
+                <div class="hero-chat__bubble hero-chat__bubble--bot hero-chat__bubble--late">Want a short walkthrough?</div>
+              </div>
+              <div class="hero-chat__typing"><i></i><i></i><i></i></div>
+            </div>
+
+            <!-- Offering strip -->
+            <ul class="hero-offers">
+              <li class="is-on">Front desk</li>
+              <li>AI employees</li>
+              <li>Custom systems</li>
+              <li>Consulting</li>
+            </ul>
           </div>
         </div>
       </div>
