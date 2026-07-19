@@ -35,7 +35,7 @@
     {
       keys: ['voice', 'phone', 'call', 'front desk', 'after hours'],
       answer:
-        'Yes — front-desk voice is part of what we build: answer when you’re busy, qualify leads, book appointments, and hand off anything sensitive. You can try our demo line at (616) 438-6252 — that’s 616-GET-NAKA.'
+        'Yes — front-desk voice is part of what we build: answer when you’re busy, qualify leads, book appointments, and hand off anything sensitive. You can try our demo line at (434) 455-5296 — that’s 434-455-5296.'
     },
     {
       keys: ['contact', 'email', 'talk', 'call me', 'human please', 'speak to someone'],
