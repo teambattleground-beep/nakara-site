@@ -9,6 +9,7 @@
 
 | Ver | Commit | Notes |
 |-----|--------|--------|
+| **v5.11** | **pending push** | Site chat widget (FAQ + lead capture); Apps Script chat leads; voice lab pack |
 | **v5.10** | **`b3e954c`** | Trial: enso + circuit 中 cyan glow mark (nav/footer/favicon). Geometric 中 backed up as `logo-*-prev-geometric*` |
 | v1 | `e201051` | Initial mockup |
 | v2 | `fa2dff9` | Value density |
