@@ -665,12 +665,19 @@ button { font-family: inherit; }
   background: var(--paper);
   border-bottom: 1px solid var(--line);
 }
-.audience .section-h { max-width: 28ch; }
+.audience__top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  margin-bottom: 2.25rem;
+}
+.audience .section-h { max-width: 28ch; margin-bottom: 0.85rem; }
 .audience__lead {
   font-size: 1.05rem;
   color: var(--ink-soft);
   max-width: 42rem;
-  margin: 0 0 2.5rem;
+  margin: 0;
   line-height: 1.55;
 }
 .audience__grid {
@@ -703,6 +710,46 @@ button { font-family: inherit; }
   margin: 0;
   line-height: 1.55;
   max-width: 36ch;
+}
+
+/* Behind Nakara card (beside Who it's for intro) */
+.behind-card {
+  margin: 0;
+  padding: 1.5rem 1.35rem 1.4rem;
+  border-radius: calc(var(--radius-lg) + 2px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow:
+    0 1px 0 rgba(10, 37, 64, 0.03),
+    0 18px 36px -26px rgba(10, 37, 64, 0.2);
+}
+.behind-card .section-label {
+  margin-bottom: 0.75rem;
+}
+.behind-card .behind__lead {
+  font-size: clamp(1rem, 0.5vw + 0.92rem, 1.15rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.45;
+  color: var(--navy-900);
+  margin: 0 0 0.9rem;
+  text-align: left;
+}
+.behind-card .behind__quiet {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0;
+  font-style: italic;
+  text-align: left;
+}
+
+@media (min-width: 900px) {
+  .audience__top {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.75rem;
+    align-items: center;
+    margin-bottom: 2.75rem;
+  }
 }
 
 /* -------- Section 3: PROBLEM -------- */
@@ -1478,24 +1525,18 @@ button { font-family: inherit; }
   box-shadow: inset 0 0 0 2px var(--accent);
 }
 
-/* -------- FAQ + Behind (two column) -------- */
-.faq-behind {
+/* -------- FAQ (full width) -------- */
+.faq {
   padding: 5rem 0 6rem;
   background: var(--white);
   border-top: 1px solid var(--line);
 }
-.faq-behind__inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.75rem;
-  align-items: start;
-}
-.faq-behind__faq .section-h {
+.faq .section-h {
   max-width: 18ch;
   margin-bottom: 1.5rem;
 }
 .faq__list {
-  max-width: none;
+  max-width: 44rem;
   border-top: 1px solid var(--line);
 }
 .faq__item {
@@ -1563,56 +1604,9 @@ button { font-family: inherit; }
   max-width: 48ch;
 }
 
-/* Behind card (right of FAQ) */
-.faq-behind__card {
-  margin: 0;
-  padding: 1.75rem 1.5rem 1.65rem;
-  border-radius: calc(var(--radius-lg) + 4px);
-  background: var(--off-white);
-  border: 1px solid var(--line);
-  box-shadow:
-    0 1px 0 rgba(10, 37, 64, 0.03),
-    0 20px 40px -28px rgba(10, 37, 64, 0.2);
-}
-.faq-behind__card .section-label {
-  margin-bottom: 0.85rem;
-}
-.faq-behind__card .behind__lead {
-  font-size: clamp(1.05rem, 0.6vw + 0.95rem, 1.28rem);
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.45;
-  color: var(--navy-900);
-  margin: 0 0 1.1rem;
-  text-align: left;
-  max-width: none;
-}
-.faq-behind__card .behind__quiet {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin: 0;
-  font-style: italic;
-  text-align: left;
-}
-
-/* legacy standalone behind (unused) */
+/* legacy */
 .behind { display: none; }
-
-@media (min-width: 900px) {
-  .faq-behind__inner {
-    grid-template-columns: 1.25fr 0.85fr;
-    gap: 3.5rem;
-    align-items: start;
-  }
-  .faq-behind__card {
-    position: sticky;
-    top: 6.5rem;
-    padding: 2rem 1.75rem 1.85rem;
-  }
-}
-
-/* Keep old .faq rules inert if referenced */
-.faq { /* merged into .faq-behind */ }
+.faq-behind { display: none; }
 
 /* -------- Section 5: WHY NAKARA -------- */
 .why {
