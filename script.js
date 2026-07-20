@@ -129,7 +129,7 @@
   // they are below the fold. This prevents the hero from being
   // invisible if JS is slow to load or blocked.
   var belowFold = document.querySelectorAll(
-    '.what__lead, .glance, .audience__lead, .audience-card, .problem__item, .stop__item, .feature, .cycle__step, .pillar, .usecase, .early__lead, .early__list, .behind__lead, .behind__quiet, .faq__item, .cta__h, .cta__sub, .cta__form, .footer__inner'
+    '.audience__lead, .audience-card, .problem__item, .stop__item, .feature, .cycle__step, .pillar, .usecase, .early__lead, .early__list, .behind__lead, .behind__quiet, .faq__item, .cta__h, .cta__sub, .cta__form, .footer__inner'
   );
 
   // Only animate sections that are clearly below the fold.
