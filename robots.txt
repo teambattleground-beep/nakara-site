@@ -1,0 +1,10 @@
+# Nakara robots.txt
+# https://nakara.ai
+
+User-agent: *
+Allow: /
+
+# Share-only pages stay crawlable for link previews but are noindex in HTML.
+# Do not block CSS/JS needed to render the main site.
+
+Sitemap: https://nakara.ai/sitemap.xml

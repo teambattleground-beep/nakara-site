@@ -36,7 +36,11 @@ function doPost(e) {
     var subject =
       source === 'chat'
         ? 'Nakara — chat lead from ' + name
-        : 'Nakara — conversation request from ' + name;
+        : source === 'voice'
+          ? 'Nakara — voice lead from ' + name
+          : source === 'api-test'
+            ? 'Nakara — test lead from ' + name
+            : 'Nakara — conversation request from ' + name;
 
     var body =
       'New inquiry from the website (' + source + ').\n\n' +
@@ -62,14 +66,14 @@ function doPost(e) {
     MailApp.sendEmail({
       to: email,
       name: FROM_NAME,
-      replyTo: 'hello@nakara.ai',
+      replyTo: 'jb@nakara.ai',
       subject: 'We received your inquiry — Nakara',
       body:
         'Hi ' + name + ',\n\n' +
         'Thanks for reaching out to Nakara. We received your note and look forward to speaking with you.\n\n' +
         'Someone from our team will follow up shortly.\n\n' +
         'To make sure our reply reaches your inbox (not spam):\n' +
-        '• Add hello@nakara.ai to your contacts\n' +
+        '• Add jb@nakara.ai to your contacts\n' +
         '• If a Nakara email lands in spam or junk, mark it Not spam\n' +
         '• If your company uses email filters, whitelist the domain nakara.ai\n\n' +
         '— Nakara\n' +
