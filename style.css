@@ -2518,6 +2518,51 @@ button { font-family: inherit; }
 .nk-chat__status.is-ok { color: #1f6b45; }
 .nk-chat__status.is-err { color: #9b2c2c; }
 
+/* Booking pane */
+.nk-chat__book-slots {
+  padding: 0.35rem 1.1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  -webkit-overflow-scrolling: touch;
+}
+.nk-chat__book-hint,
+.nk-chat__book-loading,
+.nk-chat__book-empty {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.nk-chat__book-picked {
+  margin: 0 0 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 560;
+  color: var(--navy-800);
+}
+.nk-chat__slot {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--navy-900);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.nk-chat__slot:hover {
+  border-color: var(--navy-500);
+}
+.nk-chat__slot.is-selected {
+  border-color: var(--navy-800);
+  background: rgba(15, 35, 55, 0.06);
+  font-weight: 560;
+}
+
 @media (max-width: 480px) {
   .nk-chat { right: 0.75rem; bottom: 0.75rem; }
   .nk-chat__panel {
