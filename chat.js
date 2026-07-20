@@ -41,7 +41,7 @@
     {
       keys: ['contact', 'email', 'talk', 'call me', 'human please', 'speak to someone', 'book', 'schedule', 'appointment'],
       answer:
-        'Happy to connect you. You can book a short discovery call (I only offer open times on our calendar), leave a note for the team, or email hello@nakara.ai.'
+        'Happy to connect you. Tap Book a call to pick from open times on our calendar, leave a note for the team, or email hello@nakara.ai.'
     }
   ];
 
@@ -88,10 +88,10 @@
     var faq = matchFaq(text);
     if (faq) return faq;
     if (wantsBook(text)) {
-      return 'I can book a short discovery call on open calendar times. Tap Book a call, or leave a note if nothing fits.';
+      return 'I can show open discovery times on our calendar — tap Book a call and pick a slot that works, or leave a note if none fit.';
     }
     if (wantsHuman(text)) {
-      return 'I can have the team follow up, or book a discovery call on an open slot. What’s easiest?';
+      return 'I can have the team follow up, or you can pick an open discovery slot under Book a call. Which do you prefer?';
     }
     return 'I’m having a slow moment reaching my full brain. Ask about Nakara, AI employees, voice/front desk — or book a call / leave your email.';
   }
@@ -463,7 +463,7 @@
       if (state.messages.length === 0) {
         addMsg(
           'bot',
-          'Hi — I’m Naka, your Nakara teammate. I can explain what we do, book a discovery call on open calendar times, or connect you to the team. What are you working on?'
+          'Hi — I’m Naka, your Nakara teammate. I can explain what we do, show open discovery times for you to pick from, or connect you to the team. What are you working on?'
         );
       }
       var input = document.getElementById('nk-chat-input');
