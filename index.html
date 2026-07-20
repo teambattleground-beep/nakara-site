@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=naka17" />
+  <link rel="stylesheet" href="style.css?v=naka18" />
 </head>
 <body>
 
@@ -423,52 +423,54 @@
     <!-- ============ USE CASES ============ -->
     <section class="usecases">
       <div class="container usecases__inner">
-        <!-- Left: animated capacity stage -->
-        <div class="use-reel" aria-hidden="true">
-          <div class="use-reel__stage">
-            <div class="use-reel__scene use-reel__scene--1">
-              <span class="use-reel__kicker">01 · Ops</span>
-              <strong>Inbox cleared</strong>
-              <ul class="use-reel__rows">
-                <li class="is-done">Schedule week</li>
-                <li class="is-done">Status update drafted</li>
-                <li class="is-active">Triage 12 emails…</li>
-              </ul>
-              <div class="use-reel__bar"><span></span></div>
-            </div>
-            <div class="use-reel__scene use-reel__scene--2">
-              <span class="use-reel__kicker">02 · Research</span>
-              <strong>Brief ready</strong>
-              <ul class="use-reel__rows">
-                <li class="is-done">Market scan</li>
-                <li class="is-done">Vendor shortlist</li>
-                <li class="is-active">First-pass analysis…</li>
-              </ul>
-              <div class="use-reel__bar"><span></span></div>
-            </div>
-            <div class="use-reel__scene use-reel__scene--3">
-              <span class="use-reel__kicker">03 · Sales</span>
-              <strong>Follow-ups sent</strong>
-              <ul class="use-reel__rows">
-                <li class="is-done">Lead research</li>
-                <li class="is-done">Outreach draft</li>
-                <li class="is-active">Proposal support…</li>
-              </ul>
-              <div class="use-reel__bar"><span></span></div>
-            </div>
-            <div class="use-reel__scene use-reel__scene--4">
-              <span class="use-reel__kicker">04 · Support</span>
-              <strong>Tickets triaged</strong>
-              <ul class="use-reel__rows">
-                <li class="is-done">FAQ answered</li>
-                <li class="is-done">Draft reply</li>
-                <li class="is-active">Escalate if needed…</li>
-              </ul>
-              <div class="use-reel__bar"><span></span></div>
+        <!-- Left: tall Naka capacity board (not a flip card) -->
+        <aside class="naka-board" aria-hidden="true">
+          <div class="naka-board__head">
+            <img
+              src="assets/naka/Naka_Smile_Green.png?v=naka10"
+              alt=""
+              class="naka-board__face"
+              width="64"
+              height="64"
+            />
+            <div class="naka-board__who">
+              <strong>Naka</strong>
+              <span><i class="naka-board__live"></i> Working your stack</span>
             </div>
           </div>
-          <div class="use-reel__dots"><span></span><span></span><span></span><span></span></div>
-        </div>
+
+          <p class="naka-board__tag">Capacity in motion</p>
+
+          <ul class="naka-board__lanes">
+            <li class="naka-board__lane is-done">
+              <span class="naka-board__lane-label">Ops &amp; admin</span>
+              <span class="naka-board__lane-status">Inbox triaged</span>
+              <span class="naka-board__meter"><i style="--p:92%"></i></span>
+            </li>
+            <li class="naka-board__lane is-run">
+              <span class="naka-board__lane-label">Research</span>
+              <span class="naka-board__lane-status">Brief in progress</span>
+              <span class="naka-board__meter"><i style="--p:64%"></i></span>
+            </li>
+            <li class="naka-board__lane is-run">
+              <span class="naka-board__lane-label">Sales follow-up</span>
+              <span class="naka-board__lane-status">3 drafts ready</span>
+              <span class="naka-board__meter"><i style="--p:71%"></i></span>
+            </li>
+            <li class="naka-board__lane is-wait">
+              <span class="naka-board__lane-label">Support</span>
+              <span class="naka-board__lane-status">Watching queue</span>
+              <span class="naka-board__meter"><i style="--p:38%"></i></span>
+            </li>
+          </ul>
+
+          <div class="naka-board__foot">
+            <div class="naka-board__bubble">
+              “I’ll handle the glue work. You stay on judgment.”
+            </div>
+            <p class="naka-board__meta">One teammate · four lanes · human on anything sensitive</p>
+          </div>
+        </aside>
 
         <!-- Right: copy -->
         <div class="usecases__copy">
