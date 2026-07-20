@@ -444,7 +444,7 @@
       '<button type="submit" class="nk-chat__send nk-chat__send--block" id="nk-book-submit">Confirm booking</button>' +
       '</form>' +
       '<button type="button" class="nk-chat__back" id="nk-book-back">Back to chat</button>' +
-      '<button type="button" class="nk-chat__back" id="nk-book-to-lead">Nothing fits — leave a note</button>' +
+      '<a class="nk-chat__back" href="book.html" style="display:inline-block;margin-top:0.25rem">Open full booking page</a><button type="button" class="nk-chat__back" id="nk-book-to-lead">Nothing fits — leave a note</button>' +
       '<p class="nk-chat__status" id="nk-book-status" hidden></p>';
 
     body.appendChild(chatPane);

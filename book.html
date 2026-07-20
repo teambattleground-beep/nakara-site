@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a short Nakara discovery call. Pick an open time on our calendar — busy times stay hidden." />
+  <title>Book a discovery call — Nakara</title>
+  <link rel="canonical" href="https://nakara.ai/book.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Nakara" />
+  <meta property="og:url" content="https://nakara.ai/book.html" />
+  <meta property="og:title" content="Book a discovery call — Nakara" />
+  <meta property="og:description" content="Pick an open time for a short discovery conversation. Same calendar Naka uses on chat and phone." />
+  <meta property="og:image" content="https://nakara.ai/assets/og-social-1200x630.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book a discovery call — Nakara" />
+  <meta name="twitter:description" content="Pick an open time for a short discovery conversation." />
+  <meta name="twitter:image" content="https://nakara.ai/assets/og-social-1200x630.jpg" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=naka2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=naka2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=naka2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=naka14" />
+</head>
+<body class="page-book">
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Nakara home">
+        <img src="assets/logo-mark.png?v=naka2" alt="" class="nav__logo-mark" width="40" height="40" />
+        <span class="nav__wordmark">Nakara</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#naka">Meet Naka</a>
+        <a href="demo.html">Live demo</a>
+        <a href="book.html" aria-current="page">Book</a>
+      </nav>
+      <a href="tel:+14344555296" class="btn btn--ghost nav__cta">Call Naka</a>
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobile-menu" hidden>
+      <a href="index.html#naka">Meet Naka</a>
+      <a href="demo.html">Live demo</a>
+      <a href="book.html">Book</a>
+      <a href="tel:+14344555296" class="btn btn--ghost">Call Naka</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="book-hero">
+      <div class="container book-hero__inner">
+        <p class="section-label">Discovery</p>
+        <h1 class="book-hero__h">Book a short call</h1>
+        <p class="book-hero__sub">
+          Pick an <strong>open</strong> time below. Busy times on our calendar stay hidden —
+          same live schedule Naka uses in chat and on the phone.
+        </p>
+        <p class="book-hero__meta">30 minutes · Eastern Time · Calendar invite to your email</p>
+      </div>
+    </section>
+
+    <section class="book-main" aria-labelledby="book-slots-heading">
+      <div class="container book-layout">
+        <div class="book-panel">
+          <div class="book-panel__head">
+            <h2 class="book-panel__h" id="book-slots-heading">Open times</h2>
+            <button type="button" class="book-refresh" id="book-refresh">Refresh</button>
+          </div>
+          <p class="book-panel__hint" id="book-hint">Loading open times…</p>
+          <div class="book-slots" id="book-slots" role="list"></div>
+        </div>
+
+        <div class="book-panel book-panel--form">
+          <h2 class="book-panel__h">Your details</h2>
+          <p class="book-picked" id="book-picked">Select a time on the left to continue.</p>
+          <form class="book-form" id="book-form" hidden>
+            <label class="book-flab" for="book-name">Name</label>
+            <input class="book-finput" id="book-name" name="name" required autocomplete="name" />
+
+            <label class="book-flab" for="book-email">Work email</label>
+            <input class="book-finput" id="book-email" name="email" type="email" required autocomplete="email" />
+
+            <label class="book-flab" for="book-phone">Phone <span class="book-opt">(optional)</span></label>
+            <input class="book-finput" id="book-phone" name="phone" type="tel" autocomplete="tel" />
+
+            <label class="book-flab" for="book-notes">What should we cover? <span class="book-opt">(optional)</span></label>
+            <textarea class="book-finput book-fta" id="book-notes" name="notes" rows="3" placeholder="Business type, bottleneck, or questions…"></textarea>
+
+            <button type="submit" class="btn btn--primary book-submit" id="book-submit">Confirm booking</button>
+          </form>
+          <p class="book-status" id="book-status" hidden></p>
+          <p class="book-alt">
+            Prefer chat?
+            <button type="button" class="book-text-btn" id="book-open-chat">Open Naka on this page</button>
+            · or call <a href="tel:+14344555296">(434) 455-5296</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-footnote">
+      <div class="container">
+        <p>
+          Typical windows (Eastern): Tue–Thu mornings, weekday evenings, Saturday late morning.
+          Exact open slots always come from the live calendar.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo-lockup" aria-label="Nakara home">
+          <span class="footer__wordmark">Nakara</span>
+        </a>
+        <p class="footer__tag">Headcount. Reinvented.</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <p class="footer__h">Connect</p>
+          <a href="book.html">Book a call</a>
+          <a href="demo.html">Live demo</a>
+          <a href="mailto:hello@nakara.ai">Email</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__h">Company</p>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <p>&copy; <span id="year"></span> Nakara LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.NAKARA_CHAT = {
+      phone: '+14344555296',
+      phoneDisplay: '(434) 455-5296',
+      apiUrl: 'https://naka-chat-api.onrender.com'
+    };
+    window.NAKARA_BOOK = {
+      apiUrl: 'https://naka-chat-api.onrender.com'
+    };
+  </script>
+  <script src="script.js"></script>
+  <script src="chat.js?v=naka14"></script>
+  <script src="book.js?v=naka1"></script>
+</body>
+</html>

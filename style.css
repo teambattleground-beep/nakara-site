@@ -3098,3 +3098,179 @@ button { font-family: inherit; }
   gap: 0.75rem 1rem;
   align-items: center;
 }
+
+/* =========================================================
+   Book page (public discovery booking)
+   ========================================================= */
+.page-book .book-hero {
+  padding: 7.5rem 0 2.25rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.book-hero__inner { max-width: 640px; }
+.book-hero__h {
+  margin: 0.45rem 0 0.85rem;
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--navy-900);
+}
+.book-hero__sub {
+  margin: 0 0 0.65rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.book-hero__meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.book-main {
+  padding: 2.5rem 0 3rem;
+  background: var(--white);
+}
+.book-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+@media (max-width: 840px) {
+  .book-layout { grid-template-columns: 1fr; }
+}
+.book-panel {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  padding: 1.25rem 1.35rem 1.4rem;
+  min-height: 280px;
+}
+.book-panel--form { background: var(--white); }
+.book-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+.book-panel__h {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--navy-900);
+}
+.book-refresh {
+  border: 1px solid var(--line);
+  background: var(--white);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+  color: var(--navy-800);
+}
+.book-refresh:hover { border-color: var(--navy-500); }
+.book-panel__hint {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.book-slots { display: flex; flex-direction: column; gap: 0.85rem; }
+.book-day {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.book-day-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.book-slot {
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--navy-900);
+  border-radius: 10px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.92rem;
+  cursor: pointer;
+  min-width: 6.5rem;
+  text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.book-slot:hover { border-color: var(--navy-500); }
+.book-slot.is-selected {
+  border-color: var(--navy-800);
+  background: rgba(15, 35, 55, 0.07);
+  font-weight: 600;
+}
+.book-picked {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 560;
+  color: var(--navy-800);
+}
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.book-flab {
+  margin-top: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 560;
+  color: var(--muted);
+}
+.book-opt { font-weight: 400; }
+.book-finput {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  font-size: 0.95rem;
+  background: var(--paper);
+  color: var(--navy-900);
+}
+.book-finput:focus {
+  outline: 2px solid rgba(15, 35, 55, 0.2);
+  border-color: var(--navy-500);
+}
+.book-fta { resize: vertical; min-height: 4.5rem; }
+.book-submit { margin-top: 0.85rem; width: 100%; justify-content: center; }
+.book-status {
+  margin: 0.85rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.book-status.is-ok { color: #1f6b45; }
+.book-status.is-err { color: #9b2c2c; }
+.book-alt {
+  margin: 1.1rem 0 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.book-alt a { color: var(--navy-800); }
+.book-text-btn {
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: var(--navy-800);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.book-footnote {
+  padding: 0 0 3.5rem;
+  background: var(--white);
+}
+.book-footnote p {
+  margin: 0;
+  max-width: 640px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
