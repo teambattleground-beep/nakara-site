@@ -35,7 +35,7 @@
     {
       keys: ['voice', 'phone', 'call', 'front desk', 'after hours'],
       answer:
-        'Yes — front-desk voice is part of what we build: answer when you’re busy, qualify leads, book appointments, and hand off anything sensitive. You can try our demo line at (434) 455-5296 — that’s 434-455-5296.'
+        'Yes — front-desk voice is part of what we build: answer when you’re busy, qualify leads, book appointments, and hand off anything sensitive. You can call us at (434) 455-5296.'
     },
     {
       keys: ['contact', 'email', 'talk', 'call me', 'human please', 'speak to someone'],
@@ -273,8 +273,9 @@
     });
 
     if (PHONE_DISPLAY) {
-      var call = el('a', 'nk-chat__call', 'Call demo line: ' + PHONE_DISPLAY);
+      var call = el('a', 'nk-chat__call', 'Call');
       call.href = 'tel:' + PHONE.replace(/[^\d+]/g, '');
+      call.setAttribute('aria-label', 'Call Naka at ' + PHONE_DISPLAY);
       chips.appendChild(call);
     }
 
