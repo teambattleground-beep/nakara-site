@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=naka14" />
+  <link rel="stylesheet" href="style.css?v=naka15" />
 </head>
 <body>
 
@@ -346,9 +346,46 @@
     <!-- ============ HOW IT WORKS ============ -->
     <section class="cycle" id="cycle">
       <div class="container">
-        <p class="section-label">How it works</p>
-        <h2 class="section-h">Discover. Design. Deploy. Improve.</h2>
-        <p class="cycle__lead">A clear path from &ldquo;we need help&rdquo; to an answer that earns its keep — teammate, system, or consulting.</p>
+        <div class="cycle__top">
+          <div class="cycle__intro">
+            <p class="section-label">How it works</p>
+            <h2 class="section-h">Discover. Design. Deploy. Improve.</h2>
+            <p class="cycle__lead">A clear path from &ldquo;we need help&rdquo; to an answer that earns its keep — teammate, system, or consulting.</p>
+          </div>
+
+          <!-- Animated stage flipper (fills empty right space) -->
+          <div class="cycle-reel" aria-hidden="true">
+            <div class="cycle-reel__stage">
+              <div class="cycle-reel__card cycle-reel__card--1">
+                <span class="cycle-reel__num">01</span>
+                <strong>Discover</strong>
+                <p>What’s draining the business</p>
+                <div class="cycle-reel__icon cycle-reel__icon--discover"></div>
+              </div>
+              <div class="cycle-reel__card cycle-reel__card--2">
+                <span class="cycle-reel__num">02</span>
+                <strong>Design</strong>
+                <p>Shape the right answer</p>
+                <div class="cycle-reel__icon cycle-reel__icon--design"></div>
+              </div>
+              <div class="cycle-reel__card cycle-reel__card--3">
+                <span class="cycle-reel__num">03</span>
+                <strong>Deploy</strong>
+                <p>Pilot with real work</p>
+                <div class="cycle-reel__icon cycle-reel__icon--deploy"></div>
+              </div>
+              <div class="cycle-reel__card cycle-reel__card--4">
+                <span class="cycle-reel__num">04</span>
+                <strong>Improve</strong>
+                <p>Sharper over time</p>
+                <div class="cycle-reel__icon cycle-reel__icon--improve"></div>
+              </div>
+            </div>
+            <div class="cycle-reel__dots">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
 
         <ol class="cycle__steps">
           <li class="cycle__step">
