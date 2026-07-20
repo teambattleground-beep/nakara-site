@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=naka16" />
+  <link rel="stylesheet" href="style.css?v=naka17" />
 </head>
 <body>
 
@@ -422,27 +422,77 @@
 
     <!-- ============ USE CASES ============ -->
     <section class="usecases">
-      <div class="container">
-        <p class="section-label">Where teams start</p>
-        <h2 class="section-h">Four ways AI coworkers create capacity.</h2>
+      <div class="container usecases__inner">
+        <!-- Left: animated capacity stage -->
+        <div class="use-reel" aria-hidden="true">
+          <div class="use-reel__stage">
+            <div class="use-reel__scene use-reel__scene--1">
+              <span class="use-reel__kicker">01 · Ops</span>
+              <strong>Inbox cleared</strong>
+              <ul class="use-reel__rows">
+                <li class="is-done">Schedule week</li>
+                <li class="is-done">Status update drafted</li>
+                <li class="is-active">Triage 12 emails…</li>
+              </ul>
+              <div class="use-reel__bar"><span></span></div>
+            </div>
+            <div class="use-reel__scene use-reel__scene--2">
+              <span class="use-reel__kicker">02 · Research</span>
+              <strong>Brief ready</strong>
+              <ul class="use-reel__rows">
+                <li class="is-done">Market scan</li>
+                <li class="is-done">Vendor shortlist</li>
+                <li class="is-active">First-pass analysis…</li>
+              </ul>
+              <div class="use-reel__bar"><span></span></div>
+            </div>
+            <div class="use-reel__scene use-reel__scene--3">
+              <span class="use-reel__kicker">03 · Sales</span>
+              <strong>Follow-ups sent</strong>
+              <ul class="use-reel__rows">
+                <li class="is-done">Lead research</li>
+                <li class="is-done">Outreach draft</li>
+                <li class="is-active">Proposal support…</li>
+              </ul>
+              <div class="use-reel__bar"><span></span></div>
+            </div>
+            <div class="use-reel__scene use-reel__scene--4">
+              <span class="use-reel__kicker">04 · Support</span>
+              <strong>Tickets triaged</strong>
+              <ul class="use-reel__rows">
+                <li class="is-done">FAQ answered</li>
+                <li class="is-done">Draft reply</li>
+                <li class="is-active">Escalate if needed…</li>
+              </ul>
+              <div class="use-reel__bar"><span></span></div>
+            </div>
+          </div>
+          <div class="use-reel__dots"><span></span><span></span><span></span><span></span></div>
+        </div>
 
-        <div class="usecases__list">
-          <article class="usecase">
-            <p class="usecase__label">Operations &amp; admin</p>
-            <p class="usecase__body">Scheduling, status updates, document prep, inbox triage, and the glue work that eats a founder&rsquo;s morning — handled by a digital ops teammate.</p>
-          </article>
-          <article class="usecase">
-            <p class="usecase__label">Research &amp; preparation</p>
-            <p class="usecase__body">Market scans, vendor comparisons, briefings, and first-pass analysis ready before your next meeting — so humans decide, not dig.</p>
-          </article>
-          <article class="usecase">
-            <p class="usecase__label">Sales &amp; client follow-up</p>
-            <p class="usecase__body">Lead research, personalized outreach drafts, proposal support, and follow-ups that don&rsquo;t slip — without hiring a full SDR on day one.</p>
-          </article>
-          <article class="usecase">
-            <p class="usecase__label">Support &amp; customer care</p>
-            <p class="usecase__body">Triage, FAQs, ticket drafts, and escalation to a human when tone or risk requires it — faster response without burning the team out.</p>
-          </article>
+        <!-- Right: copy -->
+        <div class="usecases__copy">
+          <p class="section-label">Where teams start</p>
+          <h2 class="section-h">Four ways AI coworkers create capacity.</h2>
+
+          <div class="usecases__list">
+            <article class="usecase">
+              <p class="usecase__label">Operations &amp; admin</p>
+              <p class="usecase__body">Scheduling, status updates, document prep, inbox triage, and the glue work that eats a founder&rsquo;s morning — handled by a digital ops teammate.</p>
+            </article>
+            <article class="usecase">
+              <p class="usecase__label">Research &amp; preparation</p>
+              <p class="usecase__body">Market scans, vendor comparisons, briefings, and first-pass analysis ready before your next meeting — so humans decide, not dig.</p>
+            </article>
+            <article class="usecase">
+              <p class="usecase__label">Sales &amp; client follow-up</p>
+              <p class="usecase__body">Lead research, personalized outreach drafts, proposal support, and follow-ups that don&rsquo;t slip — without hiring a full SDR on day one.</p>
+            </article>
+            <article class="usecase">
+              <p class="usecase__label">Support &amp; customer care</p>
+              <p class="usecase__body">Triage, FAQs, ticket drafts, and escalation to a human when tone or risk requires it — faster response without burning the team out.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
