@@ -797,7 +797,13 @@ button { font-family: inherit; }
   background: var(--white);
   border-bottom: 1px solid var(--line);
 }
-.stop .section-h { max-width: 28ch; }
+.stop__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  align-items: center;
+}
+.stop .section-h { max-width: 28ch; margin-bottom: 1.25rem; }
 .stop__list {
   list-style: none;
   padding: 0;
@@ -838,6 +844,36 @@ button { font-family: inherit; }
   margin: 0;
   line-height: 1.55;
   max-width: 48ch;
+}
+.stop__media {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow:
+    0 1px 0 rgba(10, 37, 64, 0.03),
+    0 22px 44px -24px rgba(10, 37, 64, 0.28);
+  background: #e8edf2;
+}
+.stop__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+@media (min-width: 900px) {
+  .stop__inner {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+  .stop__media {
+    position: sticky;
+    top: 6.5rem;
+  }
 }
 
 /* -------- Section 4: HOW NAKARA WORKS -------- */
