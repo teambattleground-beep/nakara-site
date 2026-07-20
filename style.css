@@ -2788,8 +2788,11 @@ button { font-family: inherit; }
 }
 @media (min-width: 900px) {
   .naka__inner {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 0.9fr 1.1fr;
     gap: 3rem;
+  }
+  .naka__visual {
+    justify-content: flex-start;
   }
 }
 
