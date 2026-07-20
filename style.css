@@ -712,6 +712,16 @@ button { font-family: inherit; }
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+.problem__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  align-items: center;
+}
+.problem__title {
+  margin: 0 0 1.5rem;
+  max-width: 14ch;
+}
 .problem__list {
   list-style: none;
   padding: 0;
@@ -720,7 +730,7 @@ button { font-family: inherit; }
 }
 .problem__item {
   position: relative;
-  padding: 2rem 0 2rem 3.5rem;
+  padding: 1.75rem 0 1.75rem 3.5rem;
   border-top: 1px solid var(--line);
   counter-increment: prob;
 }
@@ -728,27 +738,57 @@ button { font-family: inherit; }
 .problem__item::before {
   content: counter(prob, decimal-leading-zero);
   position: absolute;
-  left: 0; top: 2rem;
+  left: 0; top: 1.85rem;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   color: var(--muted);
 }
 .problem__h {
-  font-size: clamp(1.25rem, 1.5vw + 0.8rem, 1.7rem);
+  font-size: clamp(1.15rem, 1.2vw + 0.85rem, 1.45rem);
   font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--navy-900);
-  margin: 0 0 0.5rem;
-  max-width: 32ch;
+  margin: 0 0 0.45rem;
+  max-width: 28ch;
 }
 .problem__sub {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--ink-soft);
-  max-width: 48ch;
+  max-width: 42ch;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.55;
+}
+.problem__media {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow:
+    0 1px 0 rgba(10, 37, 64, 0.03),
+    0 22px 44px -24px rgba(10, 37, 64, 0.28);
+  background: #dfe5ec;
+}
+.problem__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (min-width: 900px) {
+  .problem__inner {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+  .problem__media {
+    position: sticky;
+    top: 6.5rem;
+  }
 }
 
 /* -------- Section 3.5: WHAT YOU STOP DOING -------- */
