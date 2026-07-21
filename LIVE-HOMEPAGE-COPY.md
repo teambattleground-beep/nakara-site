@@ -1,18 +1,20 @@
 # Nakara.ai — LIVE homepage copy snapshot
-**Generated:** 2026-07-21  
-**Source:** production https://nakara.ai (commit d89bf3c Fable content revision)  
-**Purpose:** plain text for AI reviewers (Claude etc.) who may get CDN/browser-cached HTML  
+**Updated:** 2026-07-21 (post-Claude tighten pass)  
+**Source:** production https://nakara.ai  
+**Purpose:** plain text for AI reviewers who may get CDN-cached HTML  
 
-If your tool still shows the old “You bring the problem” *as the H1*, ignore that cache.  
-**Current H1 is:** Every missed call is a customer calling your competitor.
+**Cache-proof checks (should match live page source):**
+- `<title>` = Every missed call is a customer calling your competitor | Nakara
+- H1 = Every missed call is a customer calling your competitor
+- Privacy/Security = real pages (`/privacy.html`, `/security.html`), not mailto
 
-**Live cache-bust URL:** https://nakara.ai/?v=fable-20260721-ship  
-**Render origin:** https://nakara-site.onrender.com/?v=fable-20260721-ship  
+**Live HTML cache-bust:** https://nakara.ai/?v=fable-pass2  
+**This file:** https://nakara.ai/LIVE-HOMEPAGE-COPY.md  
 
 ---
 
 Nakara
-The cost of waiting
+What it’s costing you
 Meet Naka
 What we build
 How it works
@@ -20,7 +22,7 @@ Why Nakara
 FAQ
 Book a call
 
-The cost of waiting
+What it’s costing you
 Meet Naka
 What we build
 How it works
@@ -28,7 +30,6 @@ Why Nakara
 FAQ
 Book a call
 Try Naka live
-
 Outcomes. Not software.
 
 Every missed call is a customer calling your competitor.
@@ -37,7 +38,6 @@ Naka, your AI teammate, answers your phones and website 24/7, follows up on ever
 
 Book a call
 Try Naka live
-
 You bring the problem. We build the answer. · Live chat on this site · Call Naka anytime: (434) 455-5296
 
 Incoming · Naka
@@ -47,14 +47,7 @@ Incoming · Naka
 “Thanks for calling — how can I help?”
 
 “I can book that for Tuesday at 4:30.”
-Live front desk
-
-Naka Site chat · on
-
-Can you cover our phones after 5?
-Yes — Naka answers, qualifies, books, and hands off cleanly.
-Want a short walkthrough?
-
+Live front desk Naka Site chat · on Can you cover our phones after 5? Yes — Naka answers, qualifies, books, and hands off cleanly. Want a short walkthrough?
 Answers 24/7
 
 Books & qualifies
@@ -104,12 +97,11 @@ Three inputs. Instant estimate. No email wall.
 Missed calls / week
 Close rate (%)
 Avg job value ($)
-
 Est. monthly lost revenue
 
-$4,500
+—
 
-About $54,000 / year · Naka costs less than a part-time hire
+Enter calls, close rate, and job value to estimate monthly lost revenue. Naka costs less than a part-time hire.
 
 Who it’s for
 
@@ -222,16 +214,12 @@ How it works
 Discover. Design. Deploy. Improve.
 
 Most businesses go from first call to a working teammate in weeks, not quarters. Your time investment: a couple of conversations and a pilot on real work.
-
 01 Discover
 Where money and time leak
-
 02 Design
 Shape Naka to your business
-
 03 Deploy
 Pilot on real calls & chat
-
 04 Improve
 Sharper every month
 
@@ -282,7 +270,6 @@ Naka is live on this number. No signup. Ask about Nakara, book a conversation, o
 Call Naka · (434) 455-5296
 Try chat on the demo
 Or book a call with us →
-
 Early clients welcome. If a pilot doesn’t earn its keep, walk away — we’ll be straight about fit before you start.
 
 Live line
@@ -298,7 +285,6 @@ Qualifies & books
 Hands off cleanly
 
 Naka Working your front desk
-
 Today’s coverage
 
 Phones Answered · 24/7
@@ -309,7 +295,6 @@ Follow-up 3 drafts ready
 
 Human handoff 1 waiting on you
 “I’ll catch the calls and follow-ups. You stay on the work that pays.”
-
 One teammate · phones + chat · human on anything sensitive
 
 Where teams start
@@ -366,11 +351,8 @@ Try Naka live ·
 Call Naka (434) 455-5296
 
 Name
-
 Work email
-
 How can we help?
-
 Book a conversation
 
 Nakara
@@ -379,11 +361,10 @@ Headcount. Reinvented.
 Product
 
 Meet Naka
-The cost of waiting
+What it’s costing you
 What we build
 How it works
 FAQ
-
 Company
 
 Book a call
@@ -391,12 +372,10 @@ Contact
 Call Naka (434) 455-5296
 Live demo
 jb@nakara.ai
-
 Legal
 
 Privacy
 Security
-
 © Nakara LLC. All rights reserved.
 
 Made with care · Virginia

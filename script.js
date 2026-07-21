@@ -182,13 +182,26 @@
   }
 
   function recalc() {
-    var calls = Math.max(0, parseFloat(callsEl.value) || 0);
-    var close = Math.max(0, Math.min(100, parseFloat(closeEl.value) || 0)) / 100;
-    var value = Math.max(0, parseFloat(valueEl.value) || 0);
+    var callsRaw = callsEl.value;
+    var closeRaw = closeEl.value;
+    var valueRaw = valueEl.value;
+    var subEl = document.getElementById('roi-sub');
+    if (callsRaw === '' || closeRaw === '' || valueRaw === '') {
+      monthlyEl.textContent = '—';
+      if (subEl) {
+        subEl.innerHTML = 'Enter calls, close rate, and job value to estimate monthly lost revenue. Naka costs less than a part-time hire.';
+      }
+      return;
+    }
+    var calls = Math.max(0, parseFloat(callsRaw) || 0);
+    var close = Math.max(0, Math.min(100, parseFloat(closeRaw) || 0)) / 100;
+    var value = Math.max(0, parseFloat(valueRaw) || 0);
     var monthly = calls * 4.33 * close * value;
     var yearly = monthly * 12;
     monthlyEl.textContent = money(monthly);
-    yearlyEl.textContent = money(yearly);
+    if (subEl) {
+      subEl.innerHTML = 'About <strong id="roi-yearly">' + money(yearly) + '</strong> / year · Naka costs less than a part-time hire';
+    }
   }
 
   ['input', 'change'].forEach(function (evt) {

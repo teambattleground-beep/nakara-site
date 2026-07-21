@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Naka answers your phones and website 24/7, follows up on leads, and hands sensitive work to a human — for less than a part-time hire. Nakara builds AI teammates for service businesses." />
-  <title>Nakara — AI teammate that recovers missed calls &amp; busywork | Book a call</title>
+  <title>Every missed call is a customer calling your competitor | Nakara</title>
   <link rel="canonical" href="https://nakara.ai/" />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Nakara" />
   <meta property="og:url" content="https://nakara.ai/" />
-  <meta property="og:title" content="Nakara — AI teammate that recovers missed calls &amp; busywork" />
+  <meta property="og:title" content="Every missed call is a customer calling your competitor | Nakara" />
   <meta property="og:description" content="Every missed call is a customer calling your competitor. Naka answers phones and chat 24/7, follows up, and escalates to a human — for less than a part-time hire." />
   <meta property="og:image" content="https://nakara.ai/assets/og-social-1200x630.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nakara — AI teammate that recovers missed calls &amp; busywork" />
+  <meta name="twitter:title" content="Every missed call is a customer calling your competitor | Nakara" />
   <meta name="twitter:description" content="Naka answers phones and chat 24/7, follows up on every lead, and hands anything sensitive to a human — for less than a part-time hire." />
   <meta name="twitter:image" content="https://nakara.ai/assets/og-social-1200x630.jpg" />
   <script type="application/ld+json">
@@ -75,7 +75,7 @@
         "@type": "WebPage",
         "@id": "https://nakara.ai/#webpage",
         "url": "https://nakara.ai/",
-        "name": "Nakara — AI teammate that recovers missed calls & busywork",
+        "name": "Every missed call is a customer calling your competitor | Nakara",
         "isPartOf": { "@id": "https://nakara.ai/#website" },
         "about": { "@id": "https://nakara.ai/#organization" },
         "description": "Naka answers your phones and website 24/7, follows up on leads, and hands sensitive work to a human — for less than a part-time hire.",
@@ -159,7 +159,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=naka15" />
+  <link rel="stylesheet" href="style.css?v=naka16" />
 </head>
 <body>
 
@@ -172,7 +172,7 @@
       </a>
 
       <nav class="nav__links" aria-label="Primary">
-        <a href="#cost">The cost of waiting</a>
+        <a href="#cost">What it’s costing you</a>
         <a href="#naka">Meet Naka</a>
         <a href="#how">What we build</a>
         <a href="#cycle">How it works</a>
@@ -188,7 +188,7 @@
     </div>
 
     <div class="nav__mobile" id="mobile-menu" hidden>
-      <a href="#cost">The cost of waiting</a>
+      <a href="#cost">What it’s costing you</a>
       <a href="#naka">Meet Naka</a>
       <a href="#how">What we build</a>
       <a href="#cycle">How it works</a>
@@ -302,21 +302,21 @@
             <div class="roi__fields">
               <label class="roi__field">
                 <span>Missed calls / week</span>
-                <input type="number" id="roi-calls" name="calls" min="0" max="500" step="1" value="5" inputmode="numeric" />
+                <input type="number" id="roi-calls" name="calls" min="0" max="500" step="1" value="" placeholder="e.g. 5" inputmode="numeric" />
               </label>
               <label class="roi__field">
                 <span>Close rate (%)</span>
-                <input type="number" id="roi-close" name="close" min="0" max="100" step="1" value="15" inputmode="numeric" />
+                <input type="number" id="roi-close" name="close" min="0" max="100" step="1" value="" placeholder="e.g. 15" inputmode="numeric" />
               </label>
               <label class="roi__field">
                 <span>Avg job value ($)</span>
-                <input type="number" id="roi-value" name="value" min="0" max="1000000" step="50" value="1500" inputmode="numeric" />
+                <input type="number" id="roi-value" name="value" min="0" max="1000000" step="50" value="" placeholder="e.g. 1500" inputmode="numeric" />
               </label>
             </div>
             <div class="roi__result" aria-live="polite">
               <p class="roi__result-label">Est. monthly lost revenue</p>
-              <p class="roi__result-num" id="roi-monthly">$4,500</p>
-              <p class="roi__result-sub">About <strong id="roi-yearly">$54,000</strong> / year · Naka costs less than a part-time hire</p>
+              <p class="roi__result-num" id="roi-monthly">—</p>
+              <p class="roi__result-sub" id="roi-sub">Enter calls, close rate, and job value to estimate monthly lost revenue. Naka costs less than a part-time hire.</p>
             </div>
           </form>
         </div>
@@ -821,7 +821,7 @@
         <div class="footer__col">
           <p class="footer__h">Product</p>
           <a href="#naka">Meet Naka</a>
-          <a href="#cost">The cost of waiting</a>
+          <a href="#cost">What it’s costing you</a>
           <a href="#how">What we build</a>
           <a href="#cycle">How it works</a>
           <a href="#faq">FAQ</a>
@@ -860,7 +860,7 @@
       apiUrl: 'https://naka-chat-api.onrender.com'
     };
   </script>
-  <script src="script.js?v=naka15"></script>
-  <script src="chat.js?v=naka15"></script>
+  <script src="script.js?v=naka16"></script>
+  <script src="chat.js?v=naka16"></script>
 </body>
 </html>
