@@ -113,7 +113,7 @@ Behind Nakara
 
 Built by operators who already run AI teammates in real work — and wanted capacity without the full cost and friction of traditional hiring.
 
-Nakara LLC · Virginia · nakara.ai
+Nakara LLC · PO Box 43 · Chatham, VA 24531 · nakara.ai
 
 Owners & founders
 
@@ -378,7 +378,7 @@ Privacy
 Security
 © Nakara LLC. All rights reserved.
 
-Made with care · Virginia
+Made with care · PO Box 43 · Chatham, VA 24531
 
 nakara.ai
 
