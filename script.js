@@ -157,3 +157,42 @@
     belowFold.forEach(function (el) { el.classList.add('is-visible'); });
   }
 })();
+
+
+/* -------- ROI mini-calculator (homepage) -------- */
+(function () {
+  var form = document.getElementById('roi-form');
+  if (!form) return;
+  var callsEl = document.getElementById('roi-calls');
+  var closeEl = document.getElementById('roi-close');
+  var valueEl = document.getElementById('roi-value');
+  var monthlyEl = document.getElementById('roi-monthly');
+  var yearlyEl = document.getElementById('roi-yearly');
+
+  function money(n) {
+    try {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 0
+      }).format(n);
+    } catch (e) {
+      return '$' + Math.round(n).toLocaleString('en-US');
+    }
+  }
+
+  function recalc() {
+    var calls = Math.max(0, parseFloat(callsEl.value) || 0);
+    var close = Math.max(0, Math.min(100, parseFloat(closeEl.value) || 0)) / 100;
+    var value = Math.max(0, parseFloat(valueEl.value) || 0);
+    var monthly = calls * 4.33 * close * value;
+    var yearly = monthly * 12;
+    monthlyEl.textContent = money(monthly);
+    yearlyEl.textContent = money(yearly);
+  }
+
+  ['input', 'change'].forEach(function (evt) {
+    form.addEventListener(evt, recalc);
+  });
+  recalc();
+})();
