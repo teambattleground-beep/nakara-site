@@ -3375,6 +3375,173 @@ button { font-family: inherit; }
   .demo-pillars__grid:not(.demo-pillars__grid--two) { grid-template-columns: repeat(4, 1fr); }
 }
 
+/* ---- Demo mobile / email-landing polish ---- */
+.demo-pillar--static { cursor: default; }
+.demo-card__number-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+.demo-card__number-link:active .demo-card__number {
+  color: var(--navy-700);
+}
+.demo-card__number--soft {
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  line-height: 1.25;
+}
+.page-demo .demo-hero .btn,
+.page-demo .demo-card .btn,
+.page-demo .demo-block .btn {
+  min-height: 48px;
+  padding-left: 1.15rem;
+  padding-right: 1.15rem;
+}
+.page-demo .demo-btn-call {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Sticky action bar — phone email path */
+.demo-sticky {
+  display: none;
+}
+body.page-demo {
+  padding-bottom: 0;
+}
+
+@media (max-width: 719px) {
+  .page-demo .demo-hero {
+    padding: 5.25rem 0 2.25rem;
+  }
+  .demo-hero__h {
+    font-size: clamp(1.75rem, 7.5vw, 2.15rem);
+    max-width: 16ch;
+  }
+  .demo-hero__sub {
+    font-size: 1rem;
+  }
+  .demo-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+  .demo-hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
+    padding-top: 0.95rem;
+    padding-bottom: 0.95rem;
+  }
+  .demo-hero__actions .hero__link {
+    text-align: center;
+    padding: 0.35rem 0 0.15rem;
+  }
+  .demo-block { padding: 2.75rem 0; }
+  .demo-pillars { padding: 2.75rem 0 1.75rem; }
+  .demo-card__number {
+    font-size: clamp(1.55rem, 7vw, 1.9rem);
+  }
+  .demo-card__btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 52px;
+  }
+  .page-demo .demo-next__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .page-demo .demo-next__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .page-demo .section-h {
+    max-width: 18ch;
+  }
+
+  /* Leave room for sticky bar + chat launcher */
+  body.page-demo {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+  }
+  body.page-demo .footer {
+    padding-bottom: 1rem;
+  }
+
+  .demo-sticky {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr 1fr;
+    gap: 0.45rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+    padding: 0.55rem 0.65rem calc(0.55rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -8px 24px rgba(6, 24, 46, 0.08);
+  }
+  .demo-sticky__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .demo-sticky__btn--call {
+    background: var(--navy-800);
+    color: var(--white);
+    border-color: var(--navy-800);
+  }
+  .demo-sticky__btn--chat {
+    background: var(--white);
+    color: var(--navy-800);
+    border-color: var(--navy-800);
+  }
+  .demo-sticky__btn--book {
+    background: var(--paper);
+    color: var(--navy-800);
+    border-color: var(--line);
+  }
+
+  /* Chat launcher sits above sticky bar, smaller label on tiny screens */
+  body.page-demo .nk-chat {
+    bottom: calc(4.35rem + env(safe-area-inset-bottom, 0px));
+    right: 0.75rem;
+  }
+  body.page-demo .nk-chat__panel {
+    height: min(560px, calc(100vh - 9.5rem - env(safe-area-inset-bottom, 0px)));
+    width: min(420px, calc(100vw - 1rem));
+  }
+}
+
+@media (max-width: 380px) {
+  body.page-demo .nk-chat__launcher-label {
+    /* icon-only-ish: keep short word */
+    font-size: 0.85rem;
+  }
+  .demo-sticky {
+    gap: 0.35rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .demo-sticky__btn { font-size: 0.88rem; }
+}
+
+
 /* =========================================================
    Meet Naka (main site)
    ========================================================= */

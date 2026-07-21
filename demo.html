@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="description" content="Nakara live demo — meet Naka, try website chat, and experience how a managed AI teammate feels. Shareable proof hub (not linked from main nav)." />
-  <title>Nakara — Live demo</title>
+  <meta name="description" content="Try Naka live — call the AI front desk or chat on this page. No signup. Nakara’s shareable demo for owners who miss after-hours calls." />
+  <title>Try Naka live — call or chat | Nakara demo</title>
   <link rel="canonical" href="https://nakara.ai/demo.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Nakara" />
   <meta property="og:url" content="https://nakara.ai/demo.html" />
-  <meta property="og:title" content="Nakara — Live demo with Naka" />
-  <meta property="og:description" content="Try Naka: site chat and live front desk. See how a managed AI teammate feels before you hire one." />
+  <meta property="og:title" content="Try Naka live — call or chat" />
+  <meta property="og:description" content="No signup. Call Naka or chat on this page. See how an AI front desk feels before you hire one." />
   <meta property="og:image" content="https://nakara.ai/assets/og-social-1200x630.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nakara — Live demo with Naka" />
-  <meta name="twitter:description" content="Try Naka: site chat and live front desk. See how a managed AI teammate feels before you hire one." />
+  <meta name="twitter:title" content="Try Naka live — call or chat" />
+  <meta name="twitter:description" content="No signup. Call Naka or chat on this page. See how an AI front desk feels before you hire one." />
   <meta name="twitter:image" content="https://nakara.ai/assets/og-social-1200x630.jpg" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=naka2" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=naka2" />
@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=naka14" />
+  <link rel="stylesheet" href="style.css?v=naka17" />
 </head>
 <body class="page-demo">
 
@@ -39,24 +39,24 @@
         <span class="nav__wordmark">Nakara</span>
       </a>
       <nav class="nav__links" aria-label="On this page">
-        <a href="index.html#naka">Meet Naka</a>
         <a href="#try">Try Naka</a>
+        <a href="#voice">Call</a>
         <a href="#chat">Chat</a>
-        <a href="#voice">Voice</a>
         <a href="#how">How it works</a>
+        <a href="book.html">Book</a>
       </nav>
-      <a href="index.html#cta" class="btn btn--ghost nav__cta">Talk to us</a>
+      <a href="tel:+14344555296" class="btn btn--ghost nav__cta">Call Naka</a>
       <button class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav__mobile" id="mobile-menu" hidden>
-      <a href="index.html#naka">Meet Naka</a>
       <a href="#try">Try Naka</a>
+      <a href="#voice">Call</a>
       <a href="#chat">Chat</a>
-      <a href="#voice">Voice</a>
       <a href="#how">How it works</a>
-      <a href="index.html#cta" class="btn btn--ghost">Talk to us</a>
+      <a href="tel:+14344555296" class="btn btn--primary">Call Naka · (434) 455-5296</a>
+      <a href="book.html" class="btn btn--ghost">Book a call</a>
     </div>
   </header>
 
@@ -64,60 +64,85 @@
 
     <section class="demo-hero">
       <div class="container demo-hero__inner">
-        <p class="section-label">Shareable live demo</p>
-        <h1 class="demo-hero__h">Meet Naka. Experience the teammate.</h1>
-        <p class="demo-hero__sub">Naka is Nakara’s AI teammate — one partner for the front of the business, with a human team behind anything sensitive. This page is working proof, not a slide deck. Share it when you want someone to feel the difference.</p>
-        <p class="demo-hero__proof">We sell <strong>capacity</strong> and <strong>calm follow-through</strong> — not another bot login to babysit.</p>
+        <p class="section-label">Live demo · no signup</p>
+        <h1 class="demo-hero__h">Hear Naka in 60 seconds.</h1>
+        <p class="demo-hero__sub">Your after-hours and overflow line — answered 24/7. Call the AI front desk or chat on this page. No app to install. No sales pitch required to try it.</p>
+        <p class="demo-hero__proof">Built for owners who miss calls after 5, at lunch, and on weekends.</p>
         <div class="demo-hero__actions">
-          <a href="#chat" class="btn btn--primary">Try chat</a>
-          <a href="#voice" class="btn btn--ghost">Try voice</a>
-          <a href="book.html" class="btn btn--ghost">Book a call</a>
-          <a href="services.html" class="hero__link">Full services menu &rarr;</a>
+          <a href="tel:+14344555296" class="btn btn--primary demo-btn-call">Call Naka · (434) 455-5296</a>
+          <button type="button" class="btn btn--ghost" id="demo-open-chat-hero">Open chat</button>
+          <a href="book.html" class="hero__link">Prefer a human? Book 15 min →</a>
         </div>
       </div>
     </section>
 
     <section class="demo-pillars" id="try">
       <div class="container">
-        <p class="section-label">Live proof</p>
-        <h2 class="section-h">One teammate. Two ways to meet them.</h2>
-        <p class="demo-lead">Start where your customers already reach you — the website and the phone. Same calm Naka, same standards, human handoff when it matters.</p>
+        <p class="section-label">Two ways to try</p>
+        <h2 class="section-h">Pick phone or chat — both are live.</h2>
+        <p class="demo-lead">Same Naka either way. Qualifies, answers calmly, and hands off to a human when it should.</p>
         <div class="demo-pillars__grid demo-pillars__grid--two">
-          <a class="demo-pillar" href="#chat">
-            <span class="demo-pillar__num">01</span>
-            <span class="demo-pillar__h">Website chat</span>
-            <span class="demo-pillar__p">Ask anything about Nakara. Get real answers — and a path to the team.</span>
-            <span class="demo-pillar__status demo-pillar__status--live">Live</span>
-          </a>
           <a class="demo-pillar" href="#voice">
+            <span class="demo-pillar__num">01</span>
+            <span class="demo-pillar__h">Call the front desk</span>
+            <span class="demo-pillar__p">Tap Call — you’re dialing Naka. Ask what we do. Try to book. Hang up when you’re done.</span>
+            <span class="demo-pillar__status demo-pillar__status--live" id="voice-status-badge">Live · (434) 455-5296</span>
+          </a>
+          <a class="demo-pillar" href="#chat">
             <span class="demo-pillar__num">02</span>
-            <span class="demo-pillar__h">Phone front desk</span>
-            <span class="demo-pillar__p">Call in, get greeted, qualified, and handed off cleanly.</span>
-            <span class="demo-pillar__status demo-pillar__status--live" id="voice-status-badge">Live</span>
+            <span class="demo-pillar__h">Website chat</span>
+            <span class="demo-pillar__p">Open chat on this page. Ask about AI employees, pricing frame, or leave a note for the team.</span>
+            <span class="demo-pillar__status demo-pillar__status--live">Live on this page</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- CHAT first (actually live) -->
-    <section class="demo-block demo-block--alt" id="chat">
+    <!-- VOICE first for email / phone traffic -->
+    <section class="demo-block demo-block--alt" id="voice">
       <div class="container demo-block__grid">
         <div>
-          <p class="section-label">Live now</p>
-          <h2 class="section-h">Talk to Naka on the site</h2>
-          <p class="demo-lead">Open the chat button (bottom right). Ask what Nakara is, how an AI employee works, or say you want to talk to the team and leave a note.</p>
+          <p class="section-label">Fastest proof</p>
+          <h2 class="section-h">Call Naka right now</h2>
+          <p class="demo-lead">No signup. You’re testing the teammate — how it greets, qualifies, and hands off. That’s the product feel cold email promised.</p>
           <ul class="demo-list">
-            <li>Intelligent answers grounded in who we are</li>
-            <li>Calm tone — same brand you see on the page</li>
-            <li>Clear path to a human with name + work email</li>
-            <li>Guardrails so it stays on-business</li>
+            <li>Answers in a calm, human pace</li>
+            <li>Qualifies with simple must-haves</li>
+            <li>Books or takes a clean message</li>
+            <li>Sensitive topics stay with a human</li>
+          </ul>
+        </div>
+        <div class="demo-card demo-card--call" id="voice-card">
+          <p class="demo-card__kicker">Tap to dial</p>
+          <a class="demo-card__number-link" id="demo-phone-link" href="tel:+14344555296">
+            <span class="demo-card__number" id="demo-phone-display">(434) 455-5296</span>
+          </a>
+          <p class="demo-card__hint" id="demo-phone-hint">One tap from your phone. You’re reaching Nakara’s live AI front desk.</p>
+          <a class="btn btn--primary demo-card__btn demo-btn-call" id="demo-phone-btn" href="tel:+14344555296">Call Naka now</a>
+          <p class="demo-card__fine">Inbound demo only. No sales pressure on the call — hang up anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAT -->
+    <section class="demo-block" id="chat">
+      <div class="container demo-block__grid">
+        <div>
+          <p class="section-label">Also live</p>
+          <h2 class="section-h">Chat with Naka on this page</h2>
+          <p class="demo-lead">Open chat below (or use the button). Ask what Nakara is, how this differs from a chatbot, or say you want to talk to the team.</p>
+          <ul class="demo-list">
+            <li>Real answers about the business</li>
+            <li>Calm tone — same brand as the site</li>
+            <li>Path to a human with name + work email</li>
+            <li>Stays on business topics</li>
           </ul>
           <button type="button" class="btn btn--primary" id="demo-open-chat">Open chat</button>
         </div>
         <div class="demo-card">
           <p class="demo-card__kicker">Try saying</p>
           <ul class="demo-card__prompts">
-            <li>“What is an AI employee?”</li>
+            <li>“What is an AI front desk?”</li>
             <li>“How is this different from a chatbot?”</li>
             <li>“I want to talk to someone”</li>
           </ul>
@@ -126,53 +151,28 @@
       </div>
     </section>
 
-    <!-- VOICE -->
-    <section class="demo-block" id="voice">
-      <div class="container demo-block__grid">
-        <div>
-          <p class="section-label">Live</p>
-          <h2 class="section-h">Call the front desk</h2>
-          <p class="demo-lead">Call Nakara’s number. Ask what we do, say you’re a business owner, try to book a conversation. Notice how it qualifies and hands off — that’s the product feel.</p>
-          <ul class="demo-list">
-            <li>Answers in a calm, human pace</li>
-            <li>Qualifies with simple must-haves</li>
-            <li>Takes details or points you to the team</li>
-            <li>High-stakes topics stay human</li>
-          </ul>
-        </div>
-        <div class="demo-card" id="voice-card">
-          <p class="demo-card__kicker">Call the demo line</p>
-          <p class="demo-card__number" id="demo-phone-display">Number coming soon</p>
-          <p class="demo-card__hint" id="demo-phone-hint">We’re standing up Nakara’s lab line. When live, the number appears here and in chat.</p>
-          <a class="btn btn--primary demo-card__btn" id="demo-phone-btn" href="index.html#cta" hidden>Call now</a>
-          <p class="demo-card__fine">Inbound demo only. No sales pressure on the call — you’re testing the teammate.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW NAKA WORKS — our process, not their pillars -->
     <section class="demo-block demo-block--alt" id="how">
       <div class="container">
         <p class="section-label">The Nakara way</p>
         <h2 class="section-h">Not another tool. A teammate with standards.</h2>
-        <p class="demo-lead">What you felt in chat (and will feel on the phone) is how we design every AI employee: clear role, lasting context, and a human on the line when it matters.</p>
+        <p class="demo-lead">What you feel on the phone and in chat is how we design every AI employee: clear role, memory that doesn’t reset every morning, and a human when it matters.</p>
         <div class="demo-pillars__grid">
-          <div class="demo-pillar" style="cursor:default">
+          <div class="demo-pillar demo-pillar--static">
             <span class="demo-pillar__num">01</span>
             <span class="demo-pillar__h">Role-shaped</span>
             <span class="demo-pillar__p">Scoped work with a job to do — not a blank chat window.</span>
           </div>
-          <div class="demo-pillar" style="cursor:default">
+          <div class="demo-pillar demo-pillar--static">
             <span class="demo-pillar__num">02</span>
-            <span class="demo-pillar__h">Learns you</span>
-            <span class="demo-pillar__p">Memory and standards that deepen over time.</span>
+            <span class="demo-pillar__h">Remembers you</span>
+            <span class="demo-pillar__p">Customers, rules, and voice — doesn’t start from zero each day.</span>
           </div>
-          <div class="demo-pillar" style="cursor:default">
+          <div class="demo-pillar demo-pillar--static">
             <span class="demo-pillar__num">03</span>
             <span class="demo-pillar__h">Human when it counts</span>
             <span class="demo-pillar__p">Escalation designed in — sensitive calls stay with people.</span>
           </div>
-          <div class="demo-pillar" style="cursor:default">
+          <div class="demo-pillar demo-pillar--static">
             <span class="demo-pillar__num">04</span>
             <span class="demo-pillar__h">Managed with you</span>
             <span class="demo-pillar__p">We configure, launch, and improve — you keep judgment.</span>
@@ -181,42 +181,38 @@
       </div>
     </section>
 
-    <!-- ENGAGEMENT PATH -->
     <section class="demo-block" id="path">
       <div class="container demo-block__grid">
         <div>
           <p class="section-label">Working together</p>
-          <h2 class="section-h">Discover. Design. Deploy. Improve.</h2>
-          <p class="demo-lead">You bring the problem. We shape the answer — AI employee, custom system, consulting, or a mix — then pilot with real work.</p>
+          <h2 class="section-h">From “missed calls” to a working teammate.</h2>
+          <p class="demo-lead">Most businesses go live in weeks, not quarters. Your time: a couple of conversations and a pilot on real traffic.</p>
           <ul class="demo-list">
-            <li>Short discovery on what’s draining the business</li>
-            <li>Clear recommendation and scope</li>
-            <li>Launch with ownership and handoff rules</li>
-            <li>Refine as the business changes</li>
+            <li>Discover what’s leaking (calls, follow-ups, owner time)</li>
+            <li>Design Naka around your voice and rules</li>
+            <li>Deploy on real phones and chat</li>
+            <li>Improve every month</li>
           </ul>
         </div>
         <div class="demo-card">
-          <p class="demo-card__kicker">Where teams often start</p>
-          <ul class="demo-card__prompts">
-            <li>Front desk coverage (web + phone)</li>
-            <li>Follow-up that doesn’t slip</li>
-            <li>Ops and admin load off the founder</li>
-            <li>Research and prep before meetings</li>
-          </ul>
-          <p class="demo-card__fine">We expand only when the first role is steady — no kitchen-sink day one.</p>
+          <p class="demo-card__kicker">Engagements start</p>
+          <p class="demo-card__number demo-card__number--soft">Less than a part-time hire</p>
+          <p class="demo-card__hint">Exact scope is set on a short call. No public price list — fit first.</p>
+          <a class="btn btn--primary demo-card__btn" href="book.html">Book 15 minutes</a>
+          <p class="demo-card__fine">Or keep testing — call and chat stay free to try.</p>
         </div>
       </div>
     </section>
 
     <section class="demo-next" id="next">
       <div class="container">
-        <p class="section-label">For operators</p>
-        <h2 class="section-h">Ready for a clearer answer?</h2>
-        <p class="demo-lead">If the chat felt like capacity — not another dashboard — that’s the product. Tell us what’s draining the business and we’ll map the right first step.</p>
+        <p class="section-label">Next step</p>
+        <h2 class="section-h">Liked the feel?</h2>
+        <p class="demo-lead">If the call or chat felt like coverage — not another dashboard — that’s the product. Tell us what’s draining the phones and we’ll map the right first step.</p>
         <div class="demo-next__actions">
-          <a href="index.html#cta" class="btn btn--primary">Request a conversation</a>
-          <a href="services.html" class="hero__link">All services &rarr;</a>
-          <a href="index.html#naka" class="hero__link">Meet Naka &rarr;</a>
+          <a href="book.html" class="btn btn--primary">Book a call</a>
+          <a href="tel:+14344555296" class="btn btn--ghost demo-btn-call">Call Naka again</a>
+          <a href="index.html" class="hero__link">See the full site →</a>
         </div>
         <p class="demo-next__fence">Sensitive decisions stay human. We design handoffs before go-live.</p>
       </div>
@@ -235,25 +231,36 @@
       <div class="footer__cols">
         <div class="footer__col">
           <p class="footer__h">Demo</p>
+          <a href="#voice">Call</a>
           <a href="#chat">Chat</a>
-          <a href="#voice">Voice</a>
           <a href="#how">How it works</a>
-          <a href="#path">Working together</a>
         </div>
         <div class="footer__col">
           <p class="footer__h">Company</p>
           <a href="index.html">Main site</a>
           <a href="book.html">Book a call</a>
-          <a href="services.html">Services menu</a>
-          <a href="mailto:hello@nakara.ai">Email</a>
+          <a href="tel:+14344555296">Call Naka</a>
+          <a href="mailto:jb@nakara.ai">jb@nakara.ai</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__h">Legal</p>
+          <a href="privacy.html">Privacy</a>
+          <a href="security.html">Security</a>
         </div>
       </div>
     </div>
     <div class="container footer__base">
       <p>&copy; <span id="year"></span> Nakara LLC. All rights reserved.</p>
-      <p class="footer__quiet">Shareable live demo · not linked from main nav</p>
+      <p class="footer__quiet">Shareable live demo · linked from email · mobile-first</p>
     </div>
   </footer>
+
+  <!-- Fixed mobile bar: email-click path -->
+  <div class="demo-sticky" role="navigation" aria-label="Quick actions">
+    <a class="demo-sticky__btn demo-sticky__btn--call" href="tel:+14344555296">Call</a>
+    <button type="button" class="demo-sticky__btn demo-sticky__btn--chat" id="demo-sticky-chat">Chat</button>
+    <a class="demo-sticky__btn demo-sticky__btn--book" href="book.html">Book</a>
+  </div>
 
   <script>
     window.NAKARA_CHAT = {
@@ -266,8 +273,8 @@
       phoneDisplay: '(434) 455-5296'
     };
   </script>
-  <script src="script.js"></script>
-  <script src="chat.js?v=naka14"></script>
-  <script src="demo.js?v=naka5"></script>
+  <script src="script.js?v=naka17"></script>
+  <script src="chat.js?v=naka17"></script>
+  <script src="demo.js?v=naka17"></script>
 </body>
 </html>
