@@ -383,3 +383,9 @@ Made with care · PO Box 43 · Chatham, VA 24531
 nakara.ai
 
 Status: Live
+
+## Trademark (2026-07-21)
+- Brand lockups use **Nakara™** (pending federal app serial 50004952).
+- **Never ®** until registration issues.
+- Footer: “NAKARA™ is a trademark of Nakara LLC.”
+- Product name **Naka** is not the filed mark — no ™ on Naka.
