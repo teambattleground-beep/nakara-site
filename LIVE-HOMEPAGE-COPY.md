@@ -1,16 +1,17 @@
 # Nakara.ai — LIVE homepage copy snapshot
-**Updated:** 2026-07-22 (Jobs tighten pass)  
+**Updated:** 2026-07-22 (hero lede — best hours / voicemail)  
 **Source:** production https://nakara.ai  
 **Purpose:** plain text for AI reviewers who may get CDN-cached HTML  
 
 **Cache-proof checks (should match live page source):**
 - `<title>` = Every missed call is a customer calling your competitor | Nakara
 - H1 = Every missed call is a customer calling your competitor
+- **Hero lede** = Your best hours shouldn’t die in voicemail…
 - Hero primary = Hear Naka answer
 - Proof section immediately under hero
 - Privacy/Security = real pages (`/privacy.html`, `/security.html`), not mailto
 
-**Live HTML cache-bust:** https://nakara.ai/?v=jobs-2026-07-22  
+**Live HTML cache-bust:** https://nakara.ai/?v=hero-lede-2026-07-22  
 **This file:** https://nakara.ai/LIVE-HOMEPAGE-COPY.md  
 
 ---
@@ -23,6 +24,8 @@ Hear Naka What it’s costing you Meet Naka What we build How it works FAQ Hear 
 Outcomes. Not software.
 
 Every missed call is a customer calling your competitor.
+
+Your best hours shouldn’t die in voicemail. Naka answers when your team can’t — qualifies, books, follows up — so every caller gets care and you get your day back. Costs less than a part-time hire. All the calm of a full front desk.
 
 Naka answers, qualifies, books, and follows up when your team cannot — phones and website chat, 24/7, with a human when it counts. Managed with you. Less than a part-time hire.
 
