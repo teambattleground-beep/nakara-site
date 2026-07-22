@@ -1125,9 +1125,9 @@ button { font-family: inherit; }
 }
 .letter-page__sig {
   display: block;
-  width: min(210px, 55vw);
+  width: min(200px, 52vw);
   height: auto;
-  margin: 0 0 0.35rem -0.35rem;
+  margin: 0 0 0.15rem -0.25rem;
   user-select: none;
   pointer-events: none;
 }
