@@ -198,13 +198,18 @@ button { font-family: inherit; }
 .nav__links {
   display: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1.35rem;
 }
 .nav__links a {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--ink-soft);
   transition: color var(--t-fast) var(--ease);
+  white-space: nowrap;
+}
+@media (min-width: 1100px) {
+  .nav__links { gap: 1.75rem; }
+  .nav__links a { font-size: 0.92rem; }
 }
 .nav__links a:hover { color: var(--navy-800); }
 .nav__signin { color: var(--navy-800) !important; font-weight: 500; }
@@ -1040,6 +1045,131 @@ button { font-family: inherit; }
   font-size: 0.98rem;
 }
 .legal-page__body a { color: var(--navy-800); text-decoration: underline; text-underline-offset: 2px; }
+
+/* -------- Letter from the Founder -------- */
+.letter-page {
+  padding: 4.5rem 0 5.5rem;
+  background:
+    radial-gradient(900px 420px at 12% -8%, rgba(201, 123, 92, 0.07), transparent 55%),
+    linear-gradient(180deg, var(--paper) 0%, var(--white) 55%, var(--paper) 100%);
+}
+.letter-page__shell {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+.letter-page__eyebrow { margin-bottom: 0.75rem; }
+.letter-page__corp {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.letter-page__title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.85rem, 3.4vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--navy-900);
+  max-width: 18ch;
+}
+.letter-page__why {
+  margin: 0 0 2rem;
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+.letter-page__card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 50px rgba(6, 24, 46, 0.06);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+.letter-page__body {
+  display: grid;
+  gap: 1.2rem;
+}
+.letter-page__body > p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.72;
+  color: var(--ink-soft);
+}
+.letter-page__pull {
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  line-height: 1.45 !important;
+  color: var(--navy-900) !important;
+  letter-spacing: -0.015em;
+  padding: 0.35rem 0 0.35rem 1rem;
+  border-left: 3px solid var(--accent);
+}
+.letter-page__pull--soft {
+  border-left-color: var(--navy-500);
+  font-weight: 600;
+}
+.letter-page__close {
+  font-size: 1.12rem !important;
+  font-weight: 600;
+  color: var(--navy-900) !important;
+  line-height: 1.55 !important;
+  margin-top: 0.35rem !important;
+}
+.letter-page__sign {
+  margin-top: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.letter-page__sig {
+  display: block;
+  width: min(210px, 55vw);
+  height: auto;
+  margin: 0 0 0.35rem -0.35rem;
+  user-select: none;
+  pointer-events: none;
+}
+.letter-page__name {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--navy-900);
+}
+.letter-page__role {
+  margin: 0.15rem 0 0;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+}
+.letter-page__site {
+  margin: 0.45rem 0 0;
+  font-size: 0.95rem;
+}
+.letter-page__site a {
+  color: var(--navy-800);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.letter-page__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1rem;
+  margin-top: 2rem;
+}
+.letter-page__phone {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--navy-800);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.page-letter .nav__links a[aria-current="page"] {
+  color: var(--navy-900);
+  font-weight: 600;
+}
 
 /* -------- Section 2.6: WHO IT'S FOR -------- */
 .audience {
