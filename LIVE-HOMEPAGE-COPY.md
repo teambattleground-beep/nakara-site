@@ -206,7 +206,7 @@ A human at Nakara accountable for the result
 
 How it works
 
-We set it up. You go live in weeks. We keep improving it.
+We set it up. You go live. We keep improving it.
 
 No software homework. Your time is usually a couple of conversations and a pilot on real calls and chat.
 
@@ -285,7 +285,7 @@ Engagements start at less than a part-time hire . Exact scope is set on a 30-min
 
 How fast is setup?
 
-Most businesses go from first conversation to a working teammate in weeks, not quarters. We set it up, you go live on real traffic, and we keep improving it weekly.
+We set it up. You go live. We keep improving it weekly from real calls and chat.
 
 What if it says something wrong?
 
