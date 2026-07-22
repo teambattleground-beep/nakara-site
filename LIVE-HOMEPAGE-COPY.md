@@ -1,44 +1,34 @@
 # Nakara.ai — LIVE homepage copy snapshot
-**Updated:** 2026-07-21 (post-Claude tighten pass)  
+**Updated:** 2026-07-22 (Jobs tighten pass)  
 **Source:** production https://nakara.ai  
 **Purpose:** plain text for AI reviewers who may get CDN-cached HTML  
 
 **Cache-proof checks (should match live page source):**
 - `<title>` = Every missed call is a customer calling your competitor | Nakara
 - H1 = Every missed call is a customer calling your competitor
+- Hero primary = Hear Naka answer
+- Proof section immediately under hero
 - Privacy/Security = real pages (`/privacy.html`, `/security.html`), not mailto
 
-**Live HTML cache-bust:** https://nakara.ai/?v=fable-pass2  
+**Live HTML cache-bust:** https://nakara.ai/?v=jobs-2026-07-22  
 **This file:** https://nakara.ai/LIVE-HOMEPAGE-COPY.md  
 
 ---
 
-Nakara
-What it’s costing you
-Meet Naka
-What we build
-How it works
-Why Nakara
-FAQ
-Book a call
+Every missed call is a customer calling your competitor | Nakara
+Nakara ™ Hear Naka What it’s costing you Meet Naka What we build How it works FAQ Hear Naka answer
 
-What it’s costing you
-Meet Naka
-What we build
-How it works
-Why Nakara
-FAQ
-Book a call
-Try Naka live
+Hear Naka What it’s costing you Meet Naka What we build How it works FAQ Hear Naka answer Book a call
+
 Outcomes. Not software.
 
 Every missed call is a customer calling your competitor.
 
-Naka, your AI teammate, answers your phones and website 24/7, follows up on every lead, and hands anything sensitive to a human — for less than a part-time hire. You keep the judgment calls; Naka does the rest.
+Naka answers, qualifies, books, and follows up when your team cannot — phones and website chat, 24/7, with a human when it counts. Managed with you. Less than a part-time hire.
 
-Book a call
-Try Naka live
-You bring the problem. We build the answer. · Live chat on this site · Call Naka anytime: (434) 455-5296
+Hear Naka answer Book a call
+
+Live now · no signup · Call Naka anytime: (434) 455-5296
 
 Incoming · Naka
 
@@ -47,7 +37,17 @@ Incoming · Naka
 “Thanks for calling — how can I help?”
 
 “I can book that for Tuesday at 4:30.”
-Live front desk Naka Site chat · on Can you cover our phones after 5? Yes — Naka answers, qualifies, books, and hands off cleanly. Want a short walkthrough?
+
+Live front desk
+
+Naka Site chat · on
+
+Can you cover our phones after 5?
+
+Yes — Naka answers, qualifies, books, and hands off cleanly.
+
+Want a short walkthrough?
+
 Answers 24/7
 
 Books & qualifies
@@ -55,6 +55,28 @@ Books & qualifies
 Follows up
 
 Human when needed
+
+Proof
+
+Don’t take our word for it — call our AI.
+
+Naka is live on this number. No signup. Ask about front desk coverage, try to book, or just hear how a real teammate sounds.
+
+Call Naka · (434) 455-5296 Open the full demo Ready to talk? Book a call →
+
+If a pilot doesn’t earn its keep, we stop cleanly. We’ll be straight about fit before you start.
+
+Live line
+
+(434) 455-5296
+
+“Thanks for calling Nakara — this is Naka.”
+
+Answers now
+
+Qualifies and books
+
+Hands off cleanly
 
 What it’s costing you
 
@@ -94,9 +116,8 @@ See what the leak might be.
 
 Three inputs. Instant estimate. No email wall.
 
-Missed calls / week
-Close rate (%)
-Avg job value ($)
+Missed calls / week Close rate (%) Avg job value ($)
+
 Est. monthly lost revenue
 
 —
@@ -105,33 +126,15 @@ Enter calls, close rate, and job value to estimate monthly lost revenue. Naka co
 
 Who it’s for
 
-Built for owners who can’t afford another full-time hire — or another missed job.
+Built for owners who miss calls while they’re on the work.
 
-If phones ring while you’re on a job, follow-ups slip, or you’re stuck buying AI tools nobody has time to run — this is for you. Service businesses first: trades, practices, agencies, and local operators.
-
-Behind Nakara
-
-Built by operators who already run AI teammates in real work — and wanted capacity without the full cost and friction of traditional hiring.
-
-Nakara LLC · PO Box 43 · Chatham, VA 24531 · nakara.ai
-
-Owners & founders
-
-Get phones and follow-ups off your plate without a full hire. Stay on judgment and customers.
-
-Ops & delivery leads
-
-Keep intake, booking, and handoffs moving after hours. Less firefighting. More completed work.
-
-Growing service teams
-
-Trades, practices, agencies, MSPs — teams that sell expertise and need coverage that doesn’t sleep.
+If phones ring on a job, after hours, or when the team is slammed — and follow-ups slip — this is for you. Service businesses first: trades, practices, agencies, and local operators who can’t afford another full-time hire sitting on the phone.
 
 Meet Naka
 
 Naka — your front desk and follow-up teammate
 
-Not another chatbot login. A job description you can hire against — answered in your voice, with a human when it counts.
+Not another chatbot login. A managed AI front-desk teammate designed around your business — with someone accountable for what gets answered, booked, escalated, and improved.
 
 Answers your phone and website chat, 24/7, in your business’s voice
 
@@ -139,20 +142,19 @@ Books appointments and qualifies leads
 
 Sends the follow-ups that slip through the cracks
 
-Remembers your customers, your preferences, your standards — it doesn’t start from zero each day
+Learns your voice, booking rules, and handoff standards from real traffic — not a blank chat every morning
 
 Escalates anything sensitive to you or your team
 
-Try Naka live
-Book a call
+Hear Naka answer Book a call
 
 The problem
 
 The old options still leave money on the table.
 
-A hire runs $50K+ loaded — and still might not fill a full role.
+A hire runs $50K+ loaded — and still might not fill after hours.
 
-Recruiting takes months. Benefits, training, and management stack on top. You needed coverage yesterday, not next quarter.
+Recruiting takes months. Benefits and management stack on top. You needed coverage yesterday, not next quarter.
 
 AI tools you tried made you the operator.
 
@@ -160,131 +162,89 @@ Another dashboard to babysit. Someone still has to wire it, watch it, and clean 
 
 Meanwhile the leak continues.
 
-Unanswered calls. Cold leads. Late follow-ups. Owner nights spent on $15/hour work.
+Unanswered calls. Cold leads. Late follow-ups. Owner nights spent on work that shouldn’t own your evening.
 
-The fix isn’t another tool. It’s a teammate.
-
-What you stop doing
-
-Relief you can measure in dollars and hours.
-
-Stop missing after-hours and overflow calls
-
-Naka picks up at 9 PM on a Saturday — qualifies, books, or takes a clean message.
-
-Stop collecting tools nobody runs
-
-One teammate, clear role, we run it with you — instead of five subscriptions and zero follow-through.
-
-Stop choosing between “hire” and “drown”
-
-Add coverage in weeks, not quarters — for a fraction of a salary.
-
-Stop guessing what AI can safely do
-
-Scope and escalation are designed in. Routine work runs; sensitive work comes to you.
+The fix isn’t another tool. It’s a teammate we set up and run with you — so you stop missing after-hours calls, stop collecting tools nobody runs, and stop choosing between “hire” and “drown.”
 
 What we build
 
-Start with Naka. Grow from there.
+Naka — phones, chat, booking. We run it with you.
 
-The flagship is simple: an AI front desk and follow-up teammate that recovers money and time. We build it with you, run it with you, and keep a human in the loop.
+The flagship is simple: a managed AI front-desk teammate that recovers money and time. One clear role. Human when it counts. Continuous improvement included.
 
-Flagship · AI employee
+Flagship · managed AI teammate
 
-Naka — phones, chat, booking, follow-up.
+Naka — front desk coverage that doesn’t sleep.
 
-Covers the front of the business so jobs stop slipping to the next listing.
+Covers phones and site chat so jobs stop slipping to the next listing.
 
-Remembers your customers, voice, and rules — gets sharper every month.
+Works from your voice, booking rules, and handoff standards — and gets better from real traffic.
 
 Done-with-you, not self-serve software. You keep judgment calls; Naka handles the busywork that used to steal your evenings.
 
-Book a call
-Try Naka live
+Hear Naka answer Book a call
 
-Need something beyond Naka?
+What’s included
 
-Custom AI systems and honest consulting.
+The managed service — not just a bot login.
 
-We also build custom AI systems and advise on where AI actually pays off. Bring the problem — we’ll tell you honestly what shape the answer should be, even if it’s simpler than an AI employee.
+This is what the monthly engagement covers so the premium isn’t “more phone minutes.” It’s accountability.
+
+One named front-desk role — phones, chat, qualification, and booking
+
+Business voice and rules you approve
+
+Written handoff and escalation paths
+
+Supervised launch on real traffic
+
+Weekly review and tuning from real calls
+
+Simple outcome check — answered, booked, handed off
+
+A human at Nakara accountable for the result
 
 How it works
 
-Discover. Design. Deploy. Improve.
+We set it up. You go live in weeks. We keep improving it.
 
-Most businesses go from first call to a working teammate in weeks, not quarters. Your time investment: a couple of conversations and a pilot on real work.
-01 Discover
-Where money and time leak
-02 Design
-Shape Naka to your business
-03 Deploy
-Pilot on real calls & chat
-04 Improve
-Sharper every month
+No software homework. Your time is usually a couple of conversations and a pilot on real calls and chat.
 
 01
-Discover
+Learn how your phones should work
 
-We map missed calls, follow-ups, and the busywork draining the owner — and what “good” looks like for your callers.
+We map missed calls, booking rules, and what “good” sounds like for your callers — plus where a human must take over.
 
 02
-Design
+Set Naka live on real traffic
 
-We shape Naka’s role, voice, booking rules, and human handoff paths around how you already work.
+We launch phone and/or site chat with clear ownership and a short supervised pilot window.
 
 03
-Deploy
+Review weekly and make it better
 
-We launch on real traffic — phone and/or site chat — with clear ownership and a short pilot window.
-
-04
-Improve
-
-We refine from real conversations. Naka remembers more of your standards each month; you stay in control.
+We tune from real conversations, keep escalation clean, and report what got answered, booked, and handed off.
 
 Why Nakara
 
-Why this works when AI tools didn’t.
+Why this works when cheap AI tools didn’t.
 
-The payoff is recovered revenue and owner time. The reason it sticks is the service model — we build and run it with you, with a human always in reach.
+The payoff is recovered revenue and owner time. The reason it sticks is the service model — managed trust, continuous improvement, and a human always in reach.
 
-It remembers you.
+Business-specific, not blank.
 
-Not a blank chatbot. Naka learns your customers, voice, and rules — and gets sharper every month instead of resetting every morning.
+Naka works from your voice, rules, and handoff paths — and improves from real traffic instead of resetting every morning like a blank chat.
 
 We run it with you.
 
-No setup burden. No dashboard to babysit. We configure, launch, and keep improving it so you stay on the business.
+No setup burden. No dashboard to babysit. We configure, launch, review weekly, and keep improving so you stay on the business.
 
 Humans stay in the loop.
 
-Routine work runs on its own. Anything sensitive comes to you. You stay in control without doing everything.
-
-Proof
-
-Don’t take our word for it — call our AI.
-
-Naka is live on this number. No signup. Ask about Nakara, book a conversation, or just hear how a real front-desk teammate sounds.
-
-Call Naka · (434) 455-5296
-Try chat on the demo
-Or book a call with us →
-Early clients welcome. If a pilot doesn’t earn its keep, walk away — we’ll be straight about fit before you start.
-
-Live line
-
-(434) 455-5296
-
-“Thanks for calling Nakara — this is Naka.”
-
-Answers now
-
-Qualifies & books
-
-Hands off cleanly
+Routine work runs on its own. Anything sensitive comes to you. Someone at Nakara is accountable for the result.
 
 Naka Working your front desk
+
 Today’s coverage
 
 Phones Answered · 24/7
@@ -294,14 +254,16 @@ Site chat 2 leads qualified
 Follow-up 3 drafts ready
 
 Human handoff 1 waiting on you
+
 “I’ll catch the calls and follow-ups. You stay on the work that pays.”
+
 One teammate · phones + chat · human on anything sensitive
 
 Where teams start
 
-Jobs Naka takes off your plate first.
+Jobs Naka takes first.
 
-Front desk & phones
+Front desk and phones
 
 Answer, qualify, book, and take clean messages after hours and when the team is slammed — so callers don’t bounce to a competitor.
 
@@ -309,83 +271,71 @@ Website chat
 
 Greet visitors in your voice, answer common questions, capture leads, and route hot ones to a human fast.
 
-Sales & client follow-up
+Follow-up that doesn’t slip
 
-The “I’ll get back to them” pile — reminders, drafts, and nudges so warm interest doesn’t go cold.
-
-Ops glue work
-
-Scheduling, status updates, and intake triage — the busywork that used to eat the founder’s morning.
+The “I’ll get back to them” pile — reminders and nudges so warm interest doesn’t go cold overnight.
 
 FAQ
 
 Straight answers.
 
 What does it cost?
-Engagements start at less than a part-time hire . Exact scope and setup are set on the call so you only pay for what the business needs.
+
+Engagements start at less than a part-time hire . Exact scope is set on a 30-minute call so you only pay for the front-desk role the business needs.
 
 How fast is setup?
-Most businesses go from first call to a working teammate in weeks, not quarters. Your time investment is usually a couple of conversations and a pilot on real work.
+
+Most businesses go from first conversation to a working teammate in weeks, not quarters. We set it up, you go live on real traffic, and we keep improving it weekly.
 
 What if it says something wrong?
+
 Sensitive or uncertain moments escalate to you or your team. We set clear limits, review paths, and improve from real traffic — so routine work runs on its own and judgment stays human.
 
 Will it replace my staff?
+
 No. The goal is to stop missing money and free people for judgment, relationships, and craft — not to strip the company of people. Most teams start by covering after-hours, overflow, and follow-ups.
 
-How is this different from ChatGPT?
-ChatGPT is a blank chat you operate. Naka is a teammate we build and run with you: it answers your phone and site, books and qualifies, remembers your customers and rules, and escalates when it should. You keep the judgment calls.
+How is this different from cheap AI receptionists?
+
+Self-serve bots sell minutes and dashboards. Naka is a managed front-desk teammate: scoped role, your rules, written escalation, supervised launch, weekly tuning, and a human at Nakara accountable for the result. You keep the judgment calls.
 
 What is Nakara?
-Nakara builds AI employees — starting with Naka, a front desk and follow-up teammate — plus custom AI systems and consulting when the problem needs a different shape.
+
+Nakara builds AI teammates for service businesses — starting with Naka, a managed front desk that answers, qualifies, books, and follows up when your team cannot.
 
 Are you available now?
-Yes — book a short conversation. We’ll be straight about fit, timing, and whether Naka or a simpler path is right.
+
+Yes. Hear Naka live first, then book a 30-minute conversation. We’ll be straight about fit and timing.
 
 Ready to stop the leak?
 
-Tell us what’s draining the business. We’ll map whether Naka, a custom system, or something simpler is the right move — in plain language.
+Hear Naka answer first. Then book a 30-minute call and we’ll map front-desk coverage for your phones — in plain language.
 
-Prefer a live feel first?
-Try Naka live ·
-Call Naka (434) 455-5296
+Hear Naka answer · Call Naka (434) 455-5296 · Book a call
 
 Name
+
 Work email
+
 How can we help?
 Book a conversation
 
-Nakara
+Nakara ™
 Headcount. Reinvented.
 
 Product
+Meet Naka What it’s costing you What we build How it works FAQ
 
-Meet Naka
-What it’s costing you
-What we build
-How it works
-FAQ
 Company
+Book a call Contact Call Naka (434) 455-5296 Live demo jb@nakara.ai
 
-Book a call
-Contact
-Call Naka (434) 455-5296
-Live demo
-jb@nakara.ai
 Legal
+Privacy Security
 
-Privacy
-Security
-© Nakara LLC. All rights reserved.
+© Nakara LLC. All rights reserved. NAKARA ™ is a trademark of Nakara LLC.
 
 Made with care · PO Box 43 · Chatham, VA 24531
 
 nakara.ai
 
 Status: Live
-
-## Trademark (2026-07-21)
-- Brand lockups use **Nakara™** (pending federal app serial 50004952).
-- **Never ®** until registration issues.
-- Footer: “NAKARA™ is a trademark of Nakara LLC.”
-- Product name **Naka** is not the filed mark — no ™ on Naka.
