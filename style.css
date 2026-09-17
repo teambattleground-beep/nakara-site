@@ -3969,3 +3969,17 @@ body.page-demo {
   color: var(--muted);
   line-height: 1.5;
 }
+
+/* Consulting page */
+.page-consulting .svc-hero {
+  padding: 7.5rem 0 3.5rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.page-consulting .nav__links a[aria-current="page"] {
+  color: var(--navy-900);
+  font-weight: 600;
+}
+@media (min-width: 800px) {
+  .page-consulting .svc-hero { padding: 8.5rem 0 4rem; }
+}

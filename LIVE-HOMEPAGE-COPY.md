@@ -1,5 +1,5 @@
 # Nakara.ai — LIVE homepage copy snapshot
-**Updated:** 2026-07-22 (hero lede — best hours / voicemail)  
+**Updated:** 2026-09-17 (Consulting tab live — homepage still Naka-first)  
 **Source:** production https://nakara.ai  
 **Purpose:** plain text for AI reviewers who may get CDN-cached HTML  
 
@@ -17,9 +17,9 @@
 ---
 
 Every missed call is a customer calling your competitor | Nakara
-Nakara ™ Hear Naka What it’s costing you Meet Naka What we build How it works FAQ Hear Naka answer
+Nakara ™ Hear Naka What it’s costing you Meet Naka What we build How it works FAQ Consulting Letter from the Founder Hear Naka answer
 
-Hear Naka What it’s costing you Meet Naka What we build How it works FAQ Hear Naka answer Book a call
+Hear Naka What it’s costing you Meet Naka What we build How it works FAQ Consulting Letter from the Founder Hear Naka answer Book a call
 
 Outcomes. Not software.
 
